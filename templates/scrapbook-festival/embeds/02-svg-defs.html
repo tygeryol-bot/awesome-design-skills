@@ -1,0 +1,19 @@
+<!-- Paste once per page in an Embed placed as the FIRST child of Body.
+     Holds the rough-ink filter (used by .is-rough and display headings) and the icon symbols. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="rough-ink" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="ink-bleed">
+      <feGaussianBlur stdDeviation=".6"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0 .8 1 1"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <symbol id="i-arrow" viewBox="0 0 34 22"><path d="M2 12C10 10.6 20 12.8 30 11M22 3.5C25 7 27.8 9 31 11C27.6 13 25 15.8 22.4 19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.4l2.95 6.15 6.7.78-4.98 4.55 1.35 6.62L12 17.2l-6.02 3.3 1.35-6.62L2.35 9.33l6.7-.78z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M3.2 13.4C6 15 7.8 17.6 9 20.2C11.8 13.4 15.8 8 21.4 3.4"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12.2 3C12.6 9 11.6 15 12 21M3 12.2C9 11.6 15 12.6 21 11.9"/></symbol>
+</svg>
+<!-- use an icon:  <svg class="button_arrow" viewBox="0 0 34 22" aria-hidden="true"><use href="#i-arrow"/></svg> -->

@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Daisy Tapes '27</title>
+  <meta name="description" content="Daisy Tapes 2027: three days, four stages and 40+ acts at Madeliefie Farm on the West Coast. Memories that stick.">
+  <meta name="theme-color" content="#f1eadb">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..800,0..100;1,9..144,400..800,0..100&family=Londrina+Solid:wght@400;900&family=Permanent+Marker&family=Space+Mono:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/scrapbook.css">
+</head>
+<body>
+  <!-- Global SVG defs: paste into a site-wide Embed (Webflow) once -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="rough-ink" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+    <symbol id="i-arrow" viewBox="0 0 34 22"><path d="M2 12C10 10.6 20 12.8 30 11M22 3.5C25 7 27.8 9 31 11C27.6 13 25 15.8 22.4 19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.4l2.95 6.15 6.7.78-4.98 4.55 1.35 6.62L12 17.2l-6.02 3.3 1.35-6.62L2.35 9.33l6.7-.78z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M3.2 13.4C6 15 7.8 17.6 9 20.2C11.8 13.4 15.8 8 21.4 3.4"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12.2 3C12.6 9 11.6 15 12 21M3 12.2C9 11.6 15 12.6 21 11.9"/></symbol>
+  </svg>
+
+  <div class="page-wrapper" id="top">
+    <a class="visually-hidden" href="#main">Skip to content</a>
+
+    <!-- NAV ================================================================ -->
+    <header class="nav_component" data-nav>
+      <div class="nav_paper">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="nav_inner">
+              <a class="nav_logo" href="#top" aria-label="Daisy Tapes 2027, back to top">
+                <img class="nav_logo-mark" src="assets/stickers/sunflower.webp" alt="">
+                <span class="nav_logo-text"><span class="nav_logo-name">Daisy Tapes</span><span class="nav_logo-year">'27 · West Coast</span></span>
+              </a>
+              <nav class="nav_menu" aria-label="Main">
+                <ul class="nav_list" role="list">
+                  <li><a class="nav_link label-strip" href="#about">About</a></li>
+                  <li><a class="nav_link label-strip" href="#lineup">Line-up</a></li>
+                  <li><a class="nav_link label-strip" href="#schedule">Schedule &amp; map</a></li>
+                  <li><a class="nav_link label-strip" href="#faq">Good to know</a></li>
+                </ul>
+              </nav>
+              <a class="button is-small nav_cta" href="#tickets">Tickets<svg class="button_arrow" aria-hidden="true" viewBox="0 0 34 22"><use href="#i-arrow"/></svg></a>
+              <button class="nav_toggle" type="button" aria-expanded="false" aria-controls="nav-sheet" data-nav-toggle>
+                <span class="nav_toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>Menu
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav_sheet bg-surface surface-lined" id="nav-sheet" role="dialog" aria-modal="true" aria-label="Menu" hidden data-nav-sheet>
+      <div class="nav_sheet-head">
+        <span class="nav_logo" aria-hidden="true"><img class="nav_logo-mark" src="assets/stickers/sunflower.webp" alt=""><span class="nav_logo-text"><span class="nav_logo-name">Daisy Tapes</span><span class="nav_logo-year">'27 · West Coast</span></span></span>
+        <button class="nav_toggle" type="button" data-nav-close style="display:inline-flex">Close</button>
+      </div>
+      <ul class="nav_sheet-list" role="list">
+        <li><a class="nav_sheet-link" href="#about">About</a></li>
+        <li><a class="nav_sheet-link" href="#lineup">Line-up</a></li>
+        <li><a class="nav_sheet-link" href="#schedule">Schedule</a></li>
+        <li><a class="nav_sheet-link" href="#map" data-open-map>Map</a></li>
+        <li><a class="nav_sheet-link" href="#faq">Good to know</a></li>
+      </ul>
+      <div class="nav_sheet-foot">
+        <a class="button is-large" href="#tickets">Tickets from R650<svg class="button_arrow" aria-hidden="true" viewBox="0 0 34 22"><use href="#i-arrow"/></svg></a>
+        <p class="label-strip is-dymo" style="width:fit-content">Fri 01 – Sun 03 Oct 2027</p>
+      </div>
+      <img class="sticker" src="assets/stickers/star-denim-b.webp" alt="" style="--w:6rem;--r:16deg;right:1rem;bottom:7rem">
+    </div>
+
+    <main class="main-wrapper" id="main">
+
+      <!-- HERO =============================================================== -->
+      <section class="section_hero" aria-labelledby="hero-title">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="scrapbook-hero" data-hero>
+              <div class="paper-bg" aria-hidden="true"><div class="paper-bg_sheet surface-denim"></div></div>
+
+              <h1 class="scrapbook-hero_headline" id="hero-title">
+                <span class="scrapbook-hero_line">Daisies will</span>
+                <span class="scrapbook-hero_line">come home</span>
+                <span class="scrapbook-hero_line">with you.</span>
+              </h1>
+
+              <div class="scrapbook-hero_kicker">
+                <p class="label-strip is-dymo"><span data-countdown>346 days</span> to gates</p>
+                <p class="label-strip" style="--r:1.5deg">4 stages · 40+ acts · 3 nights</p>
+                <p class="scrapbook-hero_hint hide-tablet" aria-hidden="true">psst, click the poster ↘</p>
+              </div>
+
+              <div class="scrapbook-hero_collage" aria-hidden="true">
+                <img class="sticker is-hover scrapbook-hero_sticker is-sunflower" src="assets/stickers/sunflower.webp" alt="">
+                <figure class="polaroid scrapbook-hero_polaroid" data-tilt>
+                  <img class="sticker is-flat" src="assets/stickers/tape-stars.webp" alt="" style="--w:clamp(6rem,10vw,8.5rem);--r:-24deg;top:-1.6rem;left:-2.4rem;z-index:5">
+                  <div class="polaroid_photo"><img src="assets/paper/card-lovely-yellow.webp" alt="" data-slot="crowd-photo"></div>
+                  <figcaption class="polaroid_caption">golden hour, big daisy '26</figcaption>
+                </figure>
+                <img class="sticker is-hover scrapbook-hero_sticker is-smiley" src="assets/stickers/smiley.webp" alt="">
+                <img class="sticker is-hover scrapbook-hero_sticker is-heart" src="assets/stickers/button-heart.webp" alt="">
+              </div>
+
+              <div class="scrapbook-hero_note">
+                <div class="note-paper" data-tilt>
+                  <img class="note-paper_clip" src="assets/stickers/clip-navy.webp" alt="">
+                  <div class="note-paper_sheet">
+                    <p class="note-paper_text">1st to 3rd<br>of October</p>
+                    <p class="note-paper_text">Madeliefie Farm<br>West Coast</p>
+                    <p class="scrapbook-hero_meta">w/ Cassette Ghosts · The Margin Lines · Velvet Paper Cuts + 40 more</p>
+                  </div>
+                </div>
+                <div class="stamp scrapbook-hero_stamp" aria-hidden="true">
+                  <div class="stamp_inner">
+                    <span class="stamp_top"><span class="stamp_script">Daisy Tapes</span><img class="stamp_mark" src="assets/stickers/sunflower.webp" alt=""><span class="stamp_year">2027</span></span>
+                    <span class="stamp_rule"></span>
+                    <span class="stamp_title">Memories<br>that stick</span>
+                  </div>
+                </div>
+              </div>
+
+              <img class="sticker is-hover scrapbook-hero_star is-a" src="assets/stickers/star-denim-a.webp" alt="">
+              <img class="sticker is-hover scrapbook-hero_star is-b" src="assets/stickers/star-denim-b.webp" alt="">
+              <img class="sticker is-hover scrapbook-hero_star is-c" src="assets/stickers/star-denim-c.webp" alt="">
+
+              <a class="scrapbook-hero_book" href="#tickets">Book your ticket <span aria-hidden="true">↓</span></a>
+
+              <div class="scrapbook-hero_cta">
+                <a class="hero-ticket" href="#tickets">
+                  <span class="tape-badge is-top is-orange" aria-hidden="true" style="width:6.5rem;height:1.8rem;padding:0"></span>
+                  <span class="hero-ticket_main">
+                    <span class="hero-ticket_admit">Admit one · weekend</span>
+                    <span class="hero-ticket_title">Get your wristband</span>
+                    <span class="hero-ticket_price">from R650 · phase 2</span>
+                  </span>
+                  <span class="hero-ticket_stub">Book<svg aria-hidden="true" viewBox="0 0 34 22"><use href="#i-arrow"/></svg></span>
+                </a>
+              </div>
+
+              <div class="scrapbook-hero_drops" aria-hidden="true" data-drops></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE TAPE ======================================================= -->
+      <div class="marquee_component" aria-hidden="true">
+        <div class="marquee_tape"><div class="marquee_track"><div class="marquee_group"><span class="marquee_item">Fri 01 – Sun 03 Oct 2027</span><img class="marquee_star" src="assets/stickers/star-clay.webp" alt=""><span class="marquee_item">Madeliefie Farm</span><img class="marquee_star" src="assets/stickers/star-clay.webp" alt=""><span class="marquee_item">Memories that stick</span><img class="marquee_star" src="assets/stickers/star-clay.webp" alt=""><span class="marquee_item">40+ acts</span><img class="marquee_star" src="assets/stickers/star-clay.webp" alt=""><span class="marquee_item">4 stages</span><img class="marquee_star" src="assets/stickers/star-clay.webp" alt=""><span class="marquee_item">3 nights under canvas</span><img class="marquee_star" src="assets/stickers/star-clay.webp" alt=""></div><div class="marquee_group"><span class="marquee_item">Fri 01 – Sun 03 Oct 2027</span><img class="marquee_star" src="assets/stickers/star-clay.webp" alt=""><span class="marquee_item">Madeliefie Farm</span><img class="marquee_star" src="assets/stickers/star-clay.webp" alt=""><span class="marquee_item">Memories that stick</span><img class="marquee_star" src="assets/stickers/star-clay.webp" alt=""><span class="marquee_item">40+ acts</span><img class="marquee_star" src="assets/stickers/star-clay.webp" alt=""><span class="marquee_item">4 stages</span><img class="marquee_star" src="assets/stickers/star-clay.webp" alt=""><span class="marquee_item">3 nights under canvas</span><img class="marquee_star" src="assets/stickers/star-clay.webp" alt=""></div></div></div>
+        <div class="marquee_tape is-orange"><div class="marquee_track"><div class="marquee_group"><span class="marquee_item">Phase 2 tickets on sale</span><img class="marquee_star" src="assets/stickers/smiley.webp" alt=""><span class="marquee_item">Line-up drop 02 in July</span><img class="marquee_star" src="assets/stickers/smiley.webp" alt=""><span class="marquee_item">Daisies will come home with you</span><img class="marquee_star" src="assets/stickers/smiley.webp" alt=""><span class="marquee_item">Hoard the feelings</span><img class="marquee_star" src="assets/stickers/smiley.webp" alt=""></div><div class="marquee_group"><span class="marquee_item">Phase 2 tickets on sale</span><img class="marquee_star" src="assets/stickers/smiley.webp" alt=""><span class="marquee_item">Line-up drop 02 in July</span><img class="marquee_star" src="assets/stickers/smiley.webp" alt=""><span class="marquee_item">Daisies will come home with you</span><img class="marquee_star" src="assets/stickers/smiley.webp" alt=""><span class="marquee_item">Hoard the feelings</span><img class="marquee_star" src="assets/stickers/smiley.webp" alt=""></div></div></div>
+      </div>
+
+      <!-- HOARD THE FEELINGS ================================================= -->
+      <section class="section_hoard" id="about" aria-labelledby="hoard-title">
+        <div class="padding-global padding-section-medium">
+          <div class="container-large">
+            <div class="hoard_component">
+              <div class="paper-bg" aria-hidden="true"><div class="paper-bg_sheet surface-mustard"></div></div>
+              <div class="hoard_grid">
+                <h2 class="hoard_headline" id="hoard-title"><span>Hoard the</span><span>feelings.</span></h2>
+                <div class="hoard_copy">
+                  <div class="paper-card hoard_definition" data-reveal>
+                    <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+                    <span class="tape-badge is-corner is-br is-kraft is-alt" aria-hidden="true"></span>
+                    <div class="paper-card_paper is-fiber surface-white">
+                      <div class="dictionary">
+                        <p><span class="dictionary_word"><span class="highlight">Memory</span></span> <span class="dictionary_say">/ˈmɛm(ə)ri/ noun</span></p>
+                        <ol class="dictionary_list">
+                          <li>The faculty by which the mind stores and remembers feelings, songs and faces.</li>
+                          <li>Something remembered from the past. <em>"That weekend really stuck."</em></li>
+                          <li>What you take home from Daisy Tapes instead of a hangover.</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="hoard_body" data-reveal>Three days of music in the hills up the West Coast. Camp under the gum trees, swim in the dam, and shoot a whole roll. Every weekend pass comes with a 27-exposure film camera. Develop it later.</p>
+                  <ul class="hoard_facts" role="list">
+                    <li><span class="label-strip is-dymo">04 stages</span></li>
+                    <li><span class="label-strip">40+ acts</span></li>
+                    <li><span class="label-strip is-acid">03 nights under canvas</span></li>
+                    <li><span class="label-strip is-butter">27 exposures each</span></li>
+                  </ul>
+                </div>
+                <div class="hoard_collage" aria-hidden="true">
+                  <img class="sticker is-hover" src="assets/stickers/lily.webp" alt="" style="--w:clamp(7rem,13vw,11rem);--r:12deg;top:-4%;right:-2%">
+                  <figure class="hoard_quote">
+                    <span class="tape-badge is-top is-kraft" style="width:6rem;height:1.8rem;padding:0"></span>
+                    <img src="assets/paper/card-everything-easy.webp" alt="">
+                  </figure>
+                  <img class="sticker is-hover" src="assets/stickers/eye.webp" alt="" style="--w:clamp(10rem,22vw,17rem);--r:-6deg;top:48%;left:-2%">
+                  <img class="sticker is-hover" src="assets/stickers/star-painted.webp" alt="" style="--w:clamp(5rem,9vw,8rem);--r:14deg;top:30%;right:4%">
+                  <img class="sticker is-hover" src="assets/stickers/flower-orange.webp" alt="" style="--w:clamp(6rem,10vw,9rem);--r:20deg;bottom:4%;right:22%">
+                  <img class="sticker is-hover" src="assets/stickers/star-clay.webp" alt="" style="--w:clamp(4.5rem,8vw,7rem);--r:-10deg;bottom:-2%;left:16%">
+                  <img class="sticker is-hover" src="assets/stickers/button-flower.webp" alt="" style="--w:clamp(3.8rem,6vw,5.5rem);--r:8deg;bottom:22%;right:-3%">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LINE-UP ============================================================ -->
+      <section class="section_lineup" id="lineup" aria-labelledby="lineup-title">
+        <div class="padding-global padding-section-small">
+          <div class="container-large">
+            <div class="lineup_component">
+              <div class="paper-bg" aria-hidden="true" style="--r:-0.4deg"><div class="paper-bg_sheet surface-graph"></div></div>
+              <header class="lineup_header">
+                <div>
+                  <p class="lineup_kicker">this year's mixtape</p>
+                  <h2 class="ransom lineup_title" id="lineup-title" data-ransom>Who's playing?</h2>
+                </div>
+                <div class="sticker-hover hide-mobile-landscape" aria-hidden="true" style="position:relative;width:9rem;height:6rem">
+                  <img class="sticker" src="assets/stickers/smiley.webp" alt="" style="--w:5rem;--r:-10deg;left:0;top:0">
+                  <img class="sticker" src="assets/stickers/star-clay.webp" alt="" style="--w:4.5rem;--r:14deg;left:3.8rem;top:1.4rem">
+                </div>
+              </header>
+
+              <div class="lineup_filters" data-filters>
+                <div class="lineup_filter-group" role="group" aria-labelledby="filter-day-label">
+                  <span class="lineup_filter-label" id="filter-day-label">Day</span>
+                  <button class="lineup_chip is-day" type="button" aria-pressed="true" data-filter-day="all">All days</button>
+              <button class="lineup_chip is-day" type="button" aria-pressed="false" data-filter-day="fri">Fri 01</button>
+              <button class="lineup_chip is-day" type="button" aria-pressed="false" data-filter-day="sat">Sat 02</button>
+              <button class="lineup_chip is-day" type="button" aria-pressed="false" data-filter-day="sun">Sun 03</button>
+                </div>
+                <div class="lineup_filter-group" role="group" aria-labelledby="filter-stage-label">
+                  <span class="lineup_filter-label" id="filter-stage-label">Stage</span>
+                  <button class="lineup_chip is-stage" type="button" aria-pressed="true" data-filter-stage="all">All stages</button>
+              <button class="lineup_chip is-stage" type="button" aria-pressed="false" data-filter-stage="daisy"><img src="assets/stickers/sunflower.webp" alt="">Big Daisy</button>
+              <button class="lineup_chip is-stage" type="button" aria-pressed="false" data-filter-stage="sun"><img src="assets/stickers/sun-face.webp" alt="">Sun Tent</button>
+              <button class="lineup_chip is-stage" type="button" aria-pressed="false" data-filter-stage="lily"><img src="assets/stickers/lily.webp" alt="">Lily Garden</button>
+              <button class="lineup_chip is-stage" type="button" aria-pressed="false" data-filter-stage="deck"><img src="assets/stickers/tape-stars.webp" alt="">Tape Deck</button>
+                </div>
+              </div>
+              <div class="lineup_status">
+                <p class="lineup_count" aria-live="polite" data-lineup-count>Showing all 16 acts</p>
+                <p class="label-strip is-dymo" style="--r:1deg">★ saves sync with the schedule</p>
+              </div>
+
+              <ul class="lineup_grid" role="list" data-lineup>
+          <li class="lineup_item is-headliner" data-day="sat" data-stage="daisy">
+            <article class="lineup_card" style="--r:-1deg" data-tilt aria-labelledby="act-cassette-ghosts">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span><span class="tape-badge is-corner is-tr is-acid is-alt" aria-hidden="true"></span>
+              <div class="lineup_poster surface-denim is-dark">
+                <p class="lineup_meta"><span>Sat 02</span><span>Big Daisy</span></p>
+                <img class="lineup_art" src="assets/stickers/eye.webp" alt="" style="--art-r:-8deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name " id="act-cassette-ghosts">Cassette Ghosts</h3>
+                  <p class="lineup_genre">synth-pop · Saturday headliner</p>
+                  <p class="lineup_time"><time>22:30</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="cassette-ghosts" aria-label="Save Cassette Ghosts to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item is-headliner" data-day="fri" data-stage="daisy">
+            <article class="lineup_card" style="--r:1.2deg" data-tilt aria-labelledby="act-velvet-paper-cuts">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span><span class="tape-badge is-corner is-tr is-acid is-alt" aria-hidden="true"></span>
+              <div class="lineup_poster surface-butter">
+                <p class="lineup_meta"><span>Fri 01</span><span>Big Daisy</span></p>
+                <img class="lineup_art" src="assets/stickers/ribbon.webp" alt="" style="--art-r:12deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name is-serif" id="act-velvet-paper-cuts">Velvet Paper Cuts</h3>
+                  <p class="lineup_genre">indie rock · Friday headliner</p>
+                  <p class="lineup_time"><time>21:45</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="velvet-paper-cuts" aria-label="Save Velvet Paper Cuts to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item" data-day="fri" data-stage="daisy">
+            <article class="lineup_card" style="--r:-1.5deg" data-tilt aria-labelledby="act-sunburn-society">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+              <div class="lineup_poster surface-lined">
+                <p class="lineup_meta"><span>Fri 01</span><span>Big Daisy</span></p>
+                <img class="lineup_art" src="assets/stickers/sun-face.webp" alt="" style="--art-r:10deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name " id="act-sunburn-society">Sunburn Society</h3>
+                  <p class="lineup_genre">surf rock</p>
+                  <p class="lineup_time"><time>18:30</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="sunburn-society" aria-label="Save Sunburn Society to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item" data-day="fri" data-stage="sun">
+            <article class="lineup_card" style="--r:1.4deg" data-tilt aria-labelledby="act-glue-stick-girls">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+              <div class="lineup_poster surface-night is-dark">
+                <p class="lineup_meta"><span>Fri 01</span><span>Sun Tent</span></p>
+                <img class="lineup_art" src="assets/stickers/star-clay.webp" alt="" style="--art-r:-12deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name is-marker" id="act-glue-stick-girls">Glue Stick Girls</h3>
+                  <p class="lineup_genre">riot punk</p>
+                  <p class="lineup_time"><time>20:15</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="glue-stick-girls" aria-label="Save Glue Stick Girls to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item" data-day="fri" data-stage="lily">
+            <article class="lineup_card" style="--r:-0.8deg" data-tilt aria-labelledby="act-moira-moths">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+              <div class="lineup_poster surface-graph">
+                <p class="lineup_meta"><span>Fri 01</span><span>Lily Garden</span></p>
+                <img class="lineup_art" src="assets/stickers/lily.webp" alt="" style="--art-r:14deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name is-serif" id="act-moira-moths">Moira &amp; The Moths</h3>
+                  <p class="lineup_genre">folk pop</p>
+                  <p class="lineup_time"><time>17:00</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="moira-moths" aria-label="Save Moira &amp; The Moths to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item" data-day="fri" data-stage="deck">
+            <article class="lineup_card" style="--r:2deg" data-tilt aria-labelledby="act-dj-highlighter">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+              <div class="lineup_poster surface-orange">
+                <p class="lineup_meta"><span>Fri 01</span><span>Tape Deck</span></p>
+                <img class="lineup_art" src="assets/stickers/starburst-yellow.webp" alt="" style="--art-r:8deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name " id="act-dj-highlighter">DJ Highlighter</h3>
+                  <p class="lineup_genre">disco house</p>
+                  <p class="lineup_time"><time>23:30</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="dj-highlighter" aria-label="Save DJ Highlighter to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item" data-day="sat" data-stage="daisy">
+            <article class="lineup_card" style="--r:-1.8deg" data-tilt aria-labelledby="act-nomvula-ray">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+              <div class="lineup_poster surface-mustard">
+                <p class="lineup_meta"><span>Sat 02</span><span>Big Daisy</span></p>
+                <img class="lineup_art" src="assets/stickers/sunflower.webp" alt="" style="--art-r:-6deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name is-serif" id="act-nomvula-ray">Nomvula Ray</h3>
+                  <p class="lineup_genre">amapiano soul</p>
+                  <p class="lineup_time"><time>19:45</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="nomvula-ray" aria-label="Save Nomvula Ray to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item" data-day="sat" data-stage="sun">
+            <article class="lineup_card" style="--r:1deg" data-tilt aria-labelledby="act-staple-gun">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+              <div class="lineup_poster surface-acid">
+                <p class="lineup_meta"><span>Sat 02</span><span>Sun Tent</span></p>
+                <img class="lineup_art" src="assets/stickers/star-painted.webp" alt="" style="--art-r:16deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name is-sketch" id="act-staple-gun">Staple Gun</h3>
+                  <p class="lineup_genre">garage punk</p>
+                  <p class="lineup_time"><time>18:00</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="staple-gun" aria-label="Save Staple Gun to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item" data-day="sat" data-stage="sun">
+            <article class="lineup_card" style="--r:-1.2deg" data-tilt aria-labelledby="act-polaroid-youth">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+              <div class="lineup_poster surface-gingham">
+                <p class="lineup_meta"><span>Sat 02</span><span>Sun Tent</span></p>
+                <img class="lineup_art" src="assets/stickers/smiley.webp" alt="" style="--art-r:-10deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name " id="act-polaroid-youth">Polaroid Youth</h3>
+                  <p class="lineup_genre">post-punk</p>
+                  <p class="lineup_time"><time>21:00</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="polaroid-youth" aria-label="Save Polaroid Youth to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item" data-day="sat" data-stage="lily">
+            <article class="lineup_card" style="--r:1.6deg" data-tilt aria-labelledby="act-lofi-lovers-club">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+              <div class="lineup_poster surface-blue-lined">
+                <p class="lineup_meta"><span>Sat 02</span><span>Lily Garden</span></p>
+                <img class="lineup_art" src="assets/stickers/button-heart.webp" alt="" style="--art-r:8deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name is-marker" id="act-lofi-lovers-club">Lo-Fi Lovers Club</h3>
+                  <p class="lineup_genre">bedroom pop</p>
+                  <p class="lineup_time"><time>16:30</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="lofi-lovers-club" aria-label="Save Lo-Fi Lovers Club to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item" data-day="sat" data-stage="deck">
+            <article class="lineup_card" style="--r:-1deg" data-tilt aria-labelledby="act-acid-daisy-soundsystem">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+              <div class="lineup_poster surface-night is-dark">
+                <p class="lineup_meta"><span>Sat 02</span><span>Tape Deck</span></p>
+                <img class="lineup_art" src="assets/stickers/button-round.webp" alt="" style="--art-r:-14deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name " id="act-acid-daisy-soundsystem">Acid Daisy Soundsystem</h3>
+                  <p class="lineup_genre">acid techno</p>
+                  <p class="lineup_time"><time>00:30</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="acid-daisy-soundsystem" aria-label="Save Acid Daisy Soundsystem to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item is-headliner" data-day="sun" data-stage="daisy">
+            <article class="lineup_card" style="--r:0.8deg" data-tilt aria-labelledby="act-the-margin-lines">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span><span class="tape-badge is-corner is-tr is-acid is-alt" aria-hidden="true"></span>
+              <div class="lineup_poster surface-lined">
+                <p class="lineup_meta"><span>Sun 03</span><span>Big Daisy</span></p>
+                <img class="lineup_art" src="assets/stickers/star-denim-a.webp" alt="" style="--art-r:12deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name is-sketch" id="act-the-margin-lines">The Margin Lines</h3>
+                  <p class="lineup_genre">indie anthems · Sunday closer</p>
+                  <p class="lineup_time"><time>20:30</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="the-margin-lines" aria-label="Save The Margin Lines to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item" data-day="sun" data-stage="lily">
+            <article class="lineup_card" style="--r:-1.6deg" data-tilt aria-labelledby="act-thandi-thumbtacks">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+              <div class="lineup_poster surface-lemon">
+                <p class="lineup_meta"><span>Sun 03</span><span>Lily Garden</span></p>
+                <img class="lineup_art" src="assets/stickers/button-flower.webp" alt="" style="--art-r:-8deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name is-serif" id="act-thandi-thumbtacks">Thandi &amp; The Thumbtacks</h3>
+                  <p class="lineup_genre">afro-folk</p>
+                  <p class="lineup_time"><time>15:00</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="thandi-thumbtacks" aria-label="Save Thandi &amp; The Thumbtacks to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item" data-day="sun" data-stage="sun">
+            <article class="lineup_card" style="--r:1.8deg" data-tilt aria-labelledby="act-bubble-wrap">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+              <div class="lineup_poster surface-white">
+                <p class="lineup_meta"><span>Sun 03</span><span>Sun Tent</span></p>
+                <img class="lineup_art" src="assets/stickers/fish.webp" alt="" style="--art-r:10deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name is-marker" id="act-bubble-wrap">Bubble Wrap</h3>
+                  <p class="lineup_genre">hyperpop</p>
+                  <p class="lineup_time"><time>19:00</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="bubble-wrap" aria-label="Save Bubble Wrap to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item" data-day="sun" data-stage="lily">
+            <article class="lineup_card" style="--r:-0.6deg" data-tilt aria-labelledby="act-sleepy-sundae">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+              <div class="lineup_poster surface-denim-plain is-dark">
+                <p class="lineup_meta"><span>Sun 03</span><span>Lily Garden</span></p>
+                <img class="lineup_art" src="assets/stickers/bow-clay.webp" alt="" style="--art-r:-12deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name is-serif" id="act-sleepy-sundae">Sleepy Sundae</h3>
+                  <p class="lineup_genre">dream pop</p>
+                  <p class="lineup_time"><time>17:30</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="sleepy-sundae" aria-label="Save Sleepy Sundae to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+          <li class="lineup_item" data-day="sun" data-stage="deck">
+            <article class="lineup_card" style="--r:1.3deg" data-tilt aria-labelledby="act-overnight-xerox">
+              <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+              <div class="lineup_poster surface-butter">
+                <p class="lineup_meta"><span>Sun 03</span><span>Tape Deck</span></p>
+                <img class="lineup_art" src="assets/stickers/flower-orange.webp" alt="" style="--art-r:18deg" decoding="async">
+                <div class="lineup_text">
+                  <h3 class="lineup_name " id="act-overnight-xerox">Overnight Xerox</h3>
+                  <p class="lineup_genre">drum &amp; bass</p>
+                  <p class="lineup_time"><time>22:00</time></p>
+                </div>
+              </div>
+              <button class="lineup_save" type="button" aria-pressed="false" data-fav="overnight-xerox" aria-label="Save Overnight Xerox to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button>
+            </article>
+          </li>
+                <li class="lineup_item" data-more>
+                  <article class="lineup_card" style="--r:1.2deg" aria-labelledby="act-more">
+                    <span class="tape-badge is-corner is-tl is-kraft" aria-hidden="true"></span>
+                    <div class="lineup_poster surface-pulp lineup_more">
+                      <p class="lineup_meta"><span>Drop 02</span><span>July</span></p>
+                      <img class="lineup_art" src="assets/stickers/star-denim-b.webp" alt="" style="--art-r:-10deg">
+                      <div class="lineup_text">
+                        <h3 class="lineup_name is-sketch" id="act-more">+24 more acts</h3>
+                        <p class="lineup_genre">The rest of the mixtape lands in July.</p>
+                        <a class="lineup_time" href="#signup">Hear it first →</a>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+              <p class="lineup_empty" hidden data-lineup-empty>Nobody on that stage that day. Try another combo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCHEDULE + MAP ZINE =============================================== -->
+      <section class="section_zine" id="schedule" aria-labelledby="zine-title">
+        <div class="paper-bg is-band" aria-hidden="true"><div class="paper-bg_sheet surface-denim"></div></div>
+        <div class="padding-global padding-section-large">
+          <div class="container-large">
+            <header class="zine_header">
+              <h2 class="zine_title" id="zine-title"><span>Plan your weekend.</span></h2>
+              <p class="zine_lede">Flip through the days, star the sets you can't miss, then check the map so you know where you're running.</p>
+            </header>
+            <div class="zine_component" data-zine id="map">
+              <div class="zine_tabs" role="tablist" aria-label="Schedule and map">
+                <button class="zine_tab" role="tab" type="button" id="tab-fri" aria-controls="panel-fri" aria-selected="true">Fri 01</button>
+                <button class="zine_tab" role="tab" type="button" id="tab-sat" aria-controls="panel-sat" aria-selected="false" tabindex="-1">Sat 02</button>
+                <button class="zine_tab" role="tab" type="button" id="tab-sun" aria-controls="panel-sun" aria-selected="false" tabindex="-1">Sun 03</button>
+                <button class="zine_tab" role="tab" type="button" id="tab-map" aria-controls="panel-map" aria-selected="false" tabindex="-1">Map</button>
+              </div>
+              <div class="zine_book">
+          <div class="zine_panel" role="tabpanel" id="panel-fri" aria-labelledby="tab-fri" tabindex="0">
+            <div class="zine_spread">
+              <span class="zine_staple" aria-hidden="true"></span><span class="zine_staple" aria-hidden="true"></span>
+              <div class="zine_page surface-lined">
+                <div class="zine_day"><h3 class="zine_day-title">Friday 1 October</h3><p class="zine_day-note">gates 12:00 · curfew 02:00</p></div>
+                <section class="zine_stage" aria-label="Big Daisy">
+                  <h4 class="zine_stage-name"><img src="assets/stickers/sunflower.webp" alt=""><span class="label-strip is-dymo">Big Daisy</span></h4>
+                  <ul class="zine_slots" role="list">
+                    <li class="zine_slot" data-fav-row="fri-daisy-1530"><time class="zine_time">15:30</time><span class="zine_act">Kite Season</span><button class="zine_star" type="button" aria-pressed="false" data-fav="fri-daisy-1530" aria-label="Save Kite Season to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="sunburn-society"><time class="zine_time">18:30</time><span class="zine_act">Sunburn Society</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sunburn-society" aria-label="Save Sunburn Society to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="velvet-paper-cuts"><time class="zine_time">21:45</time><span class="zine_act">Velvet Paper Cuts</span><button class="zine_star" type="button" aria-pressed="false" data-fav="velvet-paper-cuts" aria-label="Save Velvet Paper Cuts to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                  </ul>
+                </section>
+                <section class="zine_stage" aria-label="Lily Garden">
+                  <h4 class="zine_stage-name"><img src="assets/stickers/lily.webp" alt=""><span class="label-strip is-dymo">Lily Garden</span></h4>
+                  <ul class="zine_slots" role="list">
+                    <li class="zine_slot is-activity" data-fav-row="fri-lily-1430"><time class="zine_time">14:30</time><span class="zine_act">Open mic under the trees</span><button class="zine_star" type="button" aria-pressed="false" data-fav="fri-lily-1430" aria-label="Save Open mic under the trees to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="moira-moths"><time class="zine_time">17:00</time><span class="zine_act">Moira &amp; The Moths</span><button class="zine_star" type="button" aria-pressed="false" data-fav="moira-moths" aria-label="Save Moira &amp; The Moths to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="fri-lily-1900"><time class="zine_time">19:00</time><span class="zine_act">Fern &amp; Fable</span><button class="zine_star" type="button" aria-pressed="false" data-fav="fri-lily-1900" aria-label="Save Fern &amp; Fable to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                  </ul>
+                </section>
+              </div>
+              <div class="zine_page surface-lined is-right">
+                <section class="zine_stage" aria-label="Sun Tent">
+                  <h4 class="zine_stage-name"><img src="assets/stickers/sun-face.webp" alt=""><span class="label-strip is-dymo">Sun Tent</span></h4>
+                  <ul class="zine_slots" role="list">
+                    <li class="zine_slot is-activity" data-fav-row="fri-sun-1600"><time class="zine_time">16:00</time><span class="zine_act">Zine-making workshop</span><button class="zine_star" type="button" aria-pressed="false" data-fav="fri-sun-1600" aria-label="Save Zine-making workshop to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="fri-sun-1800"><time class="zine_time">18:00</time><span class="zine_act">Fax Machine</span><button class="zine_star" type="button" aria-pressed="false" data-fav="fri-sun-1800" aria-label="Save Fax Machine to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="glue-stick-girls"><time class="zine_time">20:15</time><span class="zine_act">Glue Stick Girls</span><button class="zine_star" type="button" aria-pressed="false" data-fav="glue-stick-girls" aria-label="Save Glue Stick Girls to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                  </ul>
+                </section>
+                <section class="zine_stage" aria-label="Tape Deck">
+                  <h4 class="zine_stage-name"><img src="assets/stickers/tape-stars.webp" alt=""><span class="label-strip is-dymo">Tape Deck</span></h4>
+                  <ul class="zine_slots" role="list">
+                    <li class="zine_slot" data-fav-row="fri-deck-2100"><time class="zine_time">21:00</time><span class="zine_act">Side B Sessions</span><button class="zine_star" type="button" aria-pressed="false" data-fav="fri-deck-2100" aria-label="Save Side B Sessions to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="dj-highlighter"><time class="zine_time">23:30</time><span class="zine_act">DJ Highlighter</span><button class="zine_star" type="button" aria-pressed="false" data-fav="dj-highlighter" aria-label="Save DJ Highlighter to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="fri-deck-0100"><time class="zine_time">01:00</time><span class="zine_act">Rewind b2b Fast Forward</span><button class="zine_star" type="button" aria-pressed="false" data-fav="fri-deck-0100" aria-label="Save Rewind b2b Fast Forward to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                  </ul>
+                </section>
+                <p class="zine_picks-empty" hidden>No picks on this day yet. Tap a star to save a set.</p>
+              </div>
+            </div>
+          </div>
+          <div class="zine_panel" role="tabpanel" id="panel-sat" aria-labelledby="tab-sat" tabindex="0" hidden>
+            <div class="zine_spread">
+              <span class="zine_staple" aria-hidden="true"></span><span class="zine_staple" aria-hidden="true"></span>
+              <div class="zine_page surface-lined">
+                <div class="zine_day"><h3 class="zine_day-title">Saturday 2 October</h3><p class="zine_day-note">gates 10:00 · curfew 02:00</p></div>
+                <section class="zine_stage" aria-label="Big Daisy">
+                  <h4 class="zine_stage-name"><img src="assets/stickers/sunflower.webp" alt=""><span class="label-strip is-dymo">Big Daisy</span></h4>
+                  <ul class="zine_slots" role="list">
+                    <li class="zine_slot" data-fav-row="sat-daisy-1600"><time class="zine_time">16:00</time><span class="zine_act">Hello Pothole</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sat-daisy-1600" aria-label="Save Hello Pothole to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="nomvula-ray"><time class="zine_time">19:45</time><span class="zine_act">Nomvula Ray</span><button class="zine_star" type="button" aria-pressed="false" data-fav="nomvula-ray" aria-label="Save Nomvula Ray to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="cassette-ghosts"><time class="zine_time">22:30</time><span class="zine_act">Cassette Ghosts</span><button class="zine_star" type="button" aria-pressed="false" data-fav="cassette-ghosts" aria-label="Save Cassette Ghosts to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                  </ul>
+                </section>
+                <section class="zine_stage" aria-label="Lily Garden">
+                  <h4 class="zine_stage-name"><img src="assets/stickers/lily.webp" alt=""><span class="label-strip is-dymo">Lily Garden</span></h4>
+                  <ul class="zine_slots" role="list">
+                    <li class="zine_slot is-activity" data-fav-row="sat-lily-1230"><time class="zine_time">12:30</time><span class="zine_act">Film camera photo walk</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sat-lily-1230" aria-label="Save Film camera photo walk to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="lofi-lovers-club"><time class="zine_time">16:30</time><span class="zine_act">Lo-Fi Lovers Club</span><button class="zine_star" type="button" aria-pressed="false" data-fav="lofi-lovers-club" aria-label="Save Lo-Fi Lovers Club to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="sat-lily-1830"><time class="zine_time">18:30</time><span class="zine_act">Wilder Daisies</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sat-lily-1830" aria-label="Save Wilder Daisies to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                  </ul>
+                </section>
+              </div>
+              <div class="zine_page surface-lined is-right">
+                <section class="zine_stage" aria-label="Sun Tent">
+                  <h4 class="zine_stage-name"><img src="assets/stickers/sun-face.webp" alt=""><span class="label-strip is-dymo">Sun Tent</span></h4>
+                  <ul class="zine_slots" role="list">
+                    <li class="zine_slot is-activity" data-fav-row="sat-sun-1530"><time class="zine_time">15:30</time><span class="zine_act">Sticker swap meet</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sat-sun-1530" aria-label="Save Sticker swap meet to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="staple-gun"><time class="zine_time">18:00</time><span class="zine_act">Staple Gun</span><button class="zine_star" type="button" aria-pressed="false" data-fav="staple-gun" aria-label="Save Staple Gun to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="polaroid-youth"><time class="zine_time">21:00</time><span class="zine_act">Polaroid Youth</span><button class="zine_star" type="button" aria-pressed="false" data-fav="polaroid-youth" aria-label="Save Polaroid Youth to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                  </ul>
+                </section>
+                <section class="zine_stage" aria-label="Tape Deck">
+                  <h4 class="zine_stage-name"><img src="assets/stickers/tape-stars.webp" alt=""><span class="label-strip is-dymo">Tape Deck</span></h4>
+                  <ul class="zine_slots" role="list">
+                    <li class="zine_slot" data-fav-row="sat-deck-2000"><time class="zine_time">20:00</time><span class="zine_act">Mixtape Mothers</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sat-deck-2000" aria-label="Save Mixtape Mothers to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="sat-deck-2230"><time class="zine_time">22:30</time><span class="zine_act">Static Bloom</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sat-deck-2230" aria-label="Save Static Bloom to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="acid-daisy-soundsystem"><time class="zine_time">00:30</time><span class="zine_act">Acid Daisy Soundsystem</span><button class="zine_star" type="button" aria-pressed="false" data-fav="acid-daisy-soundsystem" aria-label="Save Acid Daisy Soundsystem to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                  </ul>
+                </section>
+                <p class="zine_picks-empty" hidden>No picks on this day yet. Tap a star to save a set.</p>
+              </div>
+            </div>
+          </div>
+          <div class="zine_panel" role="tabpanel" id="panel-sun" aria-labelledby="tab-sun" tabindex="0" hidden>
+            <div class="zine_spread">
+              <span class="zine_staple" aria-hidden="true"></span><span class="zine_staple" aria-hidden="true"></span>
+              <div class="zine_page surface-lined">
+                <div class="zine_day"><h3 class="zine_day-title">Sunday 3 October</h3><p class="zine_day-note">gates 10:00 · curfew 00:00</p></div>
+                <section class="zine_stage" aria-label="Big Daisy">
+                  <h4 class="zine_stage-name"><img src="assets/stickers/sunflower.webp" alt=""><span class="label-strip is-dymo">Big Daisy</span></h4>
+                  <ul class="zine_slots" role="list">
+                    <li class="zine_slot" data-fav-row="sun-daisy-1400"><time class="zine_time">14:00</time><span class="zine_act">Sunday Paper Brass Band</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sun-daisy-1400" aria-label="Save Sunday Paper Brass Band to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="sun-daisy-1700"><time class="zine_time">17:00</time><span class="zine_act">The Doodles</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sun-daisy-1700" aria-label="Save The Doodles to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="the-margin-lines"><time class="zine_time">20:30</time><span class="zine_act">The Margin Lines</span><button class="zine_star" type="button" aria-pressed="false" data-fav="the-margin-lines" aria-label="Save The Margin Lines to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                  </ul>
+                </section>
+                <section class="zine_stage" aria-label="Lily Garden">
+                  <h4 class="zine_stage-name"><img src="assets/stickers/lily.webp" alt=""><span class="label-strip is-dymo">Lily Garden</span></h4>
+                  <ul class="zine_slots" role="list">
+                    <li class="zine_slot is-activity" data-fav-row="sun-lily-1100"><time class="zine_time">11:00</time><span class="zine_act">Sunrise yoga (bring a towel)</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sun-lily-1100" aria-label="Save Sunrise yoga (bring a towel) to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="thandi-thumbtacks"><time class="zine_time">15:00</time><span class="zine_act">Thandi &amp; The Thumbtacks</span><button class="zine_star" type="button" aria-pressed="false" data-fav="thandi-thumbtacks" aria-label="Save Thandi &amp; The Thumbtacks to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="sleepy-sundae"><time class="zine_time">17:30</time><span class="zine_act">Sleepy Sundae</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sleepy-sundae" aria-label="Save Sleepy Sundae to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                  </ul>
+                </section>
+              </div>
+              <div class="zine_page surface-lined is-right">
+                <section class="zine_stage" aria-label="Sun Tent">
+                  <h4 class="zine_stage-name"><img src="assets/stickers/sun-face.webp" alt=""><span class="label-strip is-dymo">Sun Tent</span></h4>
+                  <ul class="zine_slots" role="list">
+                    <li class="zine_slot is-activity" data-fav-row="sun-sun-1300"><time class="zine_time">13:00</time><span class="zine_act">Hangover breakfast DJs</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sun-sun-1300" aria-label="Save Hangover breakfast DJs to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="sun-sun-1630"><time class="zine_time">16:30</time><span class="zine_act">Riso Kid</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sun-sun-1630" aria-label="Save Riso Kid to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="bubble-wrap"><time class="zine_time">19:00</time><span class="zine_act">Bubble Wrap</span><button class="zine_star" type="button" aria-pressed="false" data-fav="bubble-wrap" aria-label="Save Bubble Wrap to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                  </ul>
+                </section>
+                <section class="zine_stage" aria-label="Tape Deck">
+                  <h4 class="zine_stage-name"><img src="assets/stickers/tape-stars.webp" alt=""><span class="label-strip is-dymo">Tape Deck</span></h4>
+                  <ul class="zine_slots" role="list">
+                    <li class="zine_slot" data-fav-row="sun-deck-1800"><time class="zine_time">18:00</time><span class="zine_act">Lost &amp; Found (vinyl only)</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sun-deck-1800" aria-label="Save Lost &amp; Found (vinyl only) to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="sun-deck-2000"><time class="zine_time">20:00</time><span class="zine_act">Night Bus</span><button class="zine_star" type="button" aria-pressed="false" data-fav="sun-deck-2000" aria-label="Save Night Bus to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                    <li class="zine_slot" data-fav-row="overnight-xerox"><time class="zine_time">22:00</time><span class="zine_act">Overnight Xerox</span><button class="zine_star" type="button" aria-pressed="false" data-fav="overnight-xerox" aria-label="Save Overnight Xerox to my plan"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg></button></li>
+                  </ul>
+                </section>
+                <p class="zine_picks-empty" hidden>No picks on this day yet. Tap a star to save a set.</p>
+              </div>
+            </div>
+          </div>
+          <div class="zine_panel" role="tabpanel" id="panel-map" aria-labelledby="tab-map" tabindex="0" hidden>
+            <div class="zine_spread map_layout">
+              <span class="zine_staple" aria-hidden="true"></span><span class="zine_staple" aria-hidden="true"></span>
+              <div class="zine_page surface-lined map_side">
+                <h3 class="zine_day-title">The farm</h3>
+                <ul class="map_legend" role="list">
+                  <li><button class="map_legend-button" type="button" aria-pressed="false" data-pin="gate" data-title="Main gate" data-text="Wristband swaps, box office and lost property. Opens 12:00 on Friday."><span class="map_num">1</span><img src="assets/stickers/ribbon.webp" alt=""><span>Main gate</span></button></li>
+                  <li><button class="map_legend-button" type="button" aria-pressed="false" data-pin="sun" data-title="Sun Tent" data-text="Covered stage. Zine and sticker workshops by day, punk and pop by night."><span class="map_num">2</span><img src="assets/stickers/sun-face.webp" alt=""><span>Sun Tent</span></button></li>
+                  <li><button class="map_legend-button" type="button" aria-pressed="false" data-pin="market" data-title="Button Market" data-text="28 food trucks and makers. Every stall has a vegetarian option."><span class="map_num">3</span><img src="assets/stickers/button-flower.webp" alt=""><span>Button Market</span></button></li>
+                  <li><button class="map_legend-button" type="button" aria-pressed="true" data-pin="daisy" data-title="Big Daisy" data-text="The main stage. Golden Daisy viewing deck is on the left, by the sound desk."><span class="map_num">4</span><img src="assets/stickers/sunflower.webp" alt=""><span>Big Daisy</span></button></li>
+                  <li><button class="map_legend-button" type="button" aria-pressed="false" data-pin="info" data-title="Info &amp; medic" data-text="Open 24 hours. Ask anyone in a yellow vest if you need help."><span class="map_num">5</span><img src="assets/stickers/smiley.webp" alt=""><span>Info &amp; medic</span></button></li>
+                  <li><button class="map_legend-button" type="button" aria-pressed="false" data-pin="dam" data-title="The Dam" data-text="Swimming 10:00–17:00 with lifeguards on duty. No glass on the beach."><span class="map_num">6</span><img src="assets/stickers/fish.webp" alt=""><span>The Dam</span></button></li>
+                  <li><button class="map_legend-button" type="button" aria-pressed="false" data-pin="lily" data-title="Lily Garden" data-text="Acoustic stage in the gum trees. Hammocks are first come, first served."><span class="map_num">7</span><img src="assets/stickers/lily.webp" alt=""><span>Lily Garden</span></button></li>
+                  <li><button class="map_legend-button" type="button" aria-pressed="false" data-pin="camp" data-title="Campsite" data-text="Bring your own tent. Quiet zone after 02:00, water points on every row."><span class="map_num">8</span><img src="assets/stickers/star-clay.webp" alt=""><span>Campsite</span></button></li>
+                  <li><button class="map_legend-button" type="button" aria-pressed="false" data-pin="deck" data-title="Tape Deck" data-text="Late-night DJ booth under the pines. Runs until 02:00."><span class="map_num">9</span><img src="assets/stickers/tape-stars.webp" alt=""><span>Tape Deck</span></button></li>
+                  <li><button class="map_legend-button" type="button" aria-pressed="false" data-pin="golden" data-title="Golden Daisy village" data-text="Pre-pitched bell tents, hot showers and a phone-charging lounge."><span class="map_num">10</span><img src="assets/stickers/bow-clay.webp" alt=""><span>Golden Daisy village</span></button></li>
+                </ul>
+                <div class="map_info" aria-live="polite">
+                  <p class="map_info-title" data-map-title>Big Daisy</p>
+                  <p class="map_info-text" data-map-text>The main stage. Golden Daisy viewing deck is on the left, by the sound desk.</p>
+                </div>
+              </div>
+              <div class="zine_page surface-lined is-right">
+                <div class="map_canvas" data-map>
+                  <svg class="map_paths" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path class="map_water" d="M49 50 C48 43 62 41 67 46 C71 51 67 60 58 60 C52 60 49 56 49 50Z"/><path d="M8 48 C18 44 25 33 30 24"/><path d="M30 22 C40 15 48 14 55 16"/><path d="M56 16 C66 17 74 21 80 25"/><path d="M9 50 C18 53 26 55 33 54"/><path d="M35 54 C42 52 48 52 52 52"/><path d="M64 53 C70 56 77 59 83 62"/><path d="M33 56 C28 63 22 71 17 78"/><path d="M57 59 C55 67 52 75 50 82"/><path d="M84 66 C86 74 85 81 84 86"/></svg>
+                  <button class="map_pin" type="button" style="left:8%;top:48%" aria-pressed="false" data-pin="gate" data-title="Main gate" data-text="Wristband swaps, box office and lost property. Opens 12:00 on Friday." aria-label="1. Main gate"><img src="assets/stickers/ribbon.webp" alt=""><span class="map_num" aria-hidden="true">1</span></button>
+                  <button class="map_pin" type="button" style="left:30%;top:20%" aria-pressed="false" data-pin="sun" data-title="Sun Tent" data-text="Covered stage. Zine and sticker workshops by day, punk and pop by night." aria-label="2. Sun Tent"><img src="assets/stickers/sun-face.webp" alt=""><span class="map_num" aria-hidden="true">2</span></button>
+                  <button class="map_pin" type="button" style="left:55%;top:15%" aria-pressed="false" data-pin="market" data-title="Button Market" data-text="28 food trucks and makers. Every stall has a vegetarian option." aria-label="3. Button Market"><img src="assets/stickers/button-flower.webp" alt=""><span class="map_num" aria-hidden="true">3</span></button>
+                  <button class="map_pin" type="button" style="left:81%;top:25%" aria-pressed="true" data-pin="daisy" data-title="Big Daisy" data-text="The main stage. Golden Daisy viewing deck is on the left, by the sound desk." aria-label="4. Big Daisy"><img src="assets/stickers/sunflower.webp" alt=""><span class="map_num" aria-hidden="true">4</span></button>
+                  <button class="map_pin" type="button" style="left:34%;top:53%" aria-pressed="false" data-pin="info" data-title="Info &amp; medic" data-text="Open 24 hours. Ask anyone in a yellow vest if you need help." aria-label="5. Info &amp; medic"><img src="assets/stickers/smiley.webp" alt=""><span class="map_num" aria-hidden="true">5</span></button>
+                  <button class="map_pin" type="button" style="left:58%;top:52%" aria-pressed="false" data-pin="dam" data-title="The Dam" data-text="Swimming 10:00–17:00 with lifeguards on duty. No glass on the beach." aria-label="6. The Dam"><img src="assets/stickers/fish.webp" alt=""><span class="map_num" aria-hidden="true">6</span></button>
+                  <button class="map_pin" type="button" style="left:16%;top:80%" aria-pressed="false" data-pin="lily" data-title="Lily Garden" data-text="Acoustic stage in the gum trees. Hammocks are first come, first served." aria-label="7. Lily Garden"><img src="assets/stickers/lily.webp" alt=""><span class="map_num" aria-hidden="true">7</span></button>
+                  <button class="map_pin" type="button" style="left:50%;top:84%" aria-pressed="false" data-pin="camp" data-title="Campsite" data-text="Bring your own tent. Quiet zone after 02:00, water points on every row." aria-label="8. Campsite"><img src="assets/stickers/star-clay.webp" alt=""><span class="map_num" aria-hidden="true">8</span></button>
+                  <button class="map_pin" type="button" style="left:84%;top:63%" aria-pressed="false" data-pin="deck" data-title="Tape Deck" data-text="Late-night DJ booth under the pines. Runs until 02:00." aria-label="9. Tape Deck"><img src="assets/stickers/tape-stars.webp" alt=""><span class="map_num" aria-hidden="true">9</span></button>
+                  <button class="map_pin" type="button" style="left:84%;top:88%" aria-pressed="false" data-pin="golden" data-title="Golden Daisy village" data-text="Pre-pitched bell tents, hot showers and a phone-charging lounge." aria-label="10. Golden Daisy village"><img src="assets/stickers/bow-clay.webp" alt=""><span class="map_num" aria-hidden="true">10</span></button>
+                </div>
+                <p class="zine_day-note">Walking time, gate to Big Daisy: about 12 minutes.</p>
+              </div>
+            </div>
+          </div>
+              </div>
+              <div class="zine_toolbar">
+                <label class="switch" for="picks-only">
+                  <input class="switch_input" type="checkbox" id="picks-only" data-picks-only>
+                  <span class="switch_track" aria-hidden="true"><img class="switch_thumb" src="assets/stickers/star-clay.webp" alt=""></span>
+                  Only show my picks
+                </label>
+                <p class="zine_picks-count" aria-live="polite" data-picks-count>No sets saved yet</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TICKETS ============================================================ -->
+      <section class="section_tickets" id="tickets" aria-labelledby="tickets-title">
+        <div class="paper-bg is-band" aria-hidden="true"><div class="paper-bg_sheet surface-night"></div></div>
+        <div class="padding-global padding-section-large">
+          <div class="container-large">
+            <header class="ticket_header">
+              <h2 class="ticket_title" id="tickets-title"><span>Grab a wristband.</span></h2>
+              <p class="ticket_phase">Phase 2 pricing. Phase 3 starts 1 July 2027 and every pass goes up R150.</p>
+            </header>
+            <ul class="ticket_grid" role="list">
+          <li class="ticket_card" style="--r:-1.6deg;--band:var(--denim-patch);--band-ink:var(--paper-white)">
+            <div class="ticket_band" aria-hidden="true"><span class="ticket_band-text">Daisy Tapes ✶ Day ✶ 2027 ✶ Daisy Tapes ✶ Day ✶ 2027 ✶ Daisy Tapes ✶ Day ✶ 2027 ✶ Daisy Tapes ✶ Day ✶ 2027 ✶ </span><span class="ticket_clasp"></span></div>
+            <img class="sticker" src="assets/stickers/button-round.webp" alt="" style="--w:4.2rem;--r:12deg;top:2.6rem;right:-1rem" decoding="async">
+            <article class="ticket_ticket" aria-labelledby="ticket-027-0142">
+              <div class="ticket_body surface-butter">
+                <p class="ticket_admit"><span>Admit one</span><span>No. 027-0142</span></p>
+                <h3 class="ticket_name" id="ticket-027-0142">Day Tripper</h3>
+                <p class="ticket_tagline">one day, any day</p>
+                <p class="ticket_price"><span class="ticket_currency">R</span><span class="ticket_amount">650</span><span class="ticket_per">per person</span></p>
+                <ul class="ticket_features" role="list">
+                  <li class="ticket_feature"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg><span>Entry on Friday, Saturday or Sunday</span></li>
+                  <li class="ticket_feature"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg><span>All four stages</span></li>
+                  <li class="ticket_feature"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg><span>Free water refills</span></li>
+                  <li class="ticket_feature"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg><span>Re-entry until 20:00</span></li>
+                </ul>
+                <button class="button is-butter is-full ticket_cta" type="button" data-tear="Day Tripper">Grab a day pass<svg class="button_arrow" aria-hidden="true" viewBox="0 0 34 22"><use href="#i-arrow"/></svg></button>
+              </div>
+              <div class="ticket_stub surface-butter" aria-hidden="true">
+                <span class="ticket_stub-type">Day</span>
+                <svg class="ticket_barcode" viewBox="0 0 121 40" preserveAspectRatio="none"><rect x="0" width="1" height="40"/><rect x="2.5" width="2" height="40"/><rect x="5.5" width="1" height="40"/><rect x="8.5" width="1" height="40"/><rect x="10.5" width="1" height="40"/><rect x="12.5" width="3" height="40"/><rect x="16.5" width="2" height="40"/><rect x="20.5" width="1" height="40"/><rect x="23" width="2" height="40"/><rect x="26.5" width="2" height="40"/><rect x="30" width="3" height="40"/><rect x="34" width="2" height="40"/><rect x="37" width="2" height="40"/><rect x="40" width="1" height="40"/><rect x="43" width="1.5" height="40"/><rect x="46.5" width="2" height="40"/><rect x="50" width="2" height="40"/><rect x="54" width="1" height="40"/><rect x="57" width="1.5" height="40"/><rect x="59.5" width="1" height="40"/><rect x="62" width="3" height="40"/><rect x="66.5" width="1" height="40"/><rect x="69.5" width="1" height="40"/><rect x="72" width="1" height="40"/><rect x="75" width="1" height="40"/><rect x="77.5" width="3" height="40"/><rect x="81.5" width="3" height="40"/><rect x="85.5" width="3" height="40"/><rect x="89.5" width="3" height="40"/><rect x="93.5" width="2" height="40"/><rect x="97.5" width="1" height="40"/><rect x="99.5" width="3" height="40"/><rect x="104" width="3" height="40"/><rect x="108.5" width="1.5" height="40"/><rect x="112" width="1.5" height="40"/><rect x="115" width="1" height="40"/><rect x="117" width="3" height="40"/></svg>
+                <span class="ticket_serial">027-0142</span>
+              </div>
+            </article>
+          </li>
+          <li class="ticket_card is-featured" style="--r:0deg;--band:var(--neon-orange);--band-ink:var(--ink)">
+            <div class="ticket_band" aria-hidden="true"><span class="ticket_band-text">Daisy Tapes ✶ Wknd ✶ 2027 ✶ Daisy Tapes ✶ Wknd ✶ 2027 ✶ Daisy Tapes ✶ Wknd ✶ 2027 ✶ Daisy Tapes ✶ Wknd ✶ 2027 ✶ </span><span class="ticket_clasp"></span></div>
+              <div class="callout-burst" style="--w:7.2rem;--r:12deg;top:-2.6rem;right:-1.6rem"><img class="callout-burst_img" src="assets/stickers/starburst-yellow.webp" alt=""><span class="callout-burst_text">Most picked!</span></div>
+            <img class="sticker" src="assets/stickers/smiley.webp" alt="" style="--w:3.6rem;--r:-14deg;bottom:5.4rem;right:-0.9rem" decoding="async">
+            <article class="ticket_ticket" aria-labelledby="ticket-027-0911">
+              <div class="ticket_body surface-acid">
+                <p class="ticket_admit"><span>Admit one</span><span>No. 027-0911</span></p>
+                <h3 class="ticket_name" id="ticket-027-0911">Full Weekend</h3>
+                <p class="ticket_tagline">three days, three nights</p>
+                <p class="ticket_price"><span class="ticket_currency">R</span><span class="ticket_amount">1 450</span><span class="ticket_per">per person</span></p>
+                <ul class="ticket_features" role="list">
+                  <li class="ticket_feature"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg><span>All three days, all four stages</span></li>
+                  <li class="ticket_feature"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg><span>Camping, three nights</span></li>
+                  <li class="ticket_feature"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg><span>A 27-exposure film camera</span></li>
+                  <li class="ticket_feature"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg><span>Free water refills</span></li>
+                </ul>
+                <button class="button is-orange is-full ticket_cta" type="button" data-tear="Full Weekend">Grab the weekend<svg class="button_arrow" aria-hidden="true" viewBox="0 0 34 22"><use href="#i-arrow"/></svg></button>
+              </div>
+              <div class="ticket_stub surface-acid" aria-hidden="true">
+                <span class="ticket_stub-type">Wknd</span>
+                <svg class="ticket_barcode" viewBox="0 0 121 40" preserveAspectRatio="none"><rect x="0" width="1" height="40"/><rect x="2.5" width="2" height="40"/><rect x="5.5" width="1" height="40"/><rect x="8.5" width="1" height="40"/><rect x="10.5" width="1" height="40"/><rect x="12.5" width="3" height="40"/><rect x="16.5" width="2" height="40"/><rect x="20.5" width="1" height="40"/><rect x="23" width="2" height="40"/><rect x="26.5" width="2" height="40"/><rect x="30" width="3" height="40"/><rect x="34" width="2" height="40"/><rect x="37" width="2" height="40"/><rect x="40" width="1" height="40"/><rect x="43" width="1.5" height="40"/><rect x="46.5" width="2" height="40"/><rect x="50" width="2" height="40"/><rect x="54" width="1" height="40"/><rect x="57" width="1.5" height="40"/><rect x="59.5" width="1" height="40"/><rect x="62" width="3" height="40"/><rect x="66.5" width="1" height="40"/><rect x="69.5" width="1" height="40"/><rect x="72" width="1" height="40"/><rect x="75" width="1" height="40"/><rect x="77.5" width="3" height="40"/><rect x="81.5" width="3" height="40"/><rect x="85.5" width="3" height="40"/><rect x="89.5" width="3" height="40"/><rect x="93.5" width="2" height="40"/><rect x="97.5" width="1" height="40"/><rect x="99.5" width="3" height="40"/><rect x="104" width="3" height="40"/><rect x="108.5" width="1.5" height="40"/><rect x="112" width="1.5" height="40"/><rect x="115" width="1" height="40"/><rect x="117" width="3" height="40"/></svg>
+                <span class="ticket_serial">027-0911</span>
+              </div>
+            </article>
+          </li>
+          <li class="ticket_card" style="--r:1.4deg;--band:var(--butter);--band-ink:var(--ink)">
+            <div class="ticket_band" aria-hidden="true"><span class="ticket_band-text">Daisy Tapes ✶ Gold ✶ 2027 ✶ Daisy Tapes ✶ Gold ✶ 2027 ✶ Daisy Tapes ✶ Gold ✶ 2027 ✶ Daisy Tapes ✶ Gold ✶ 2027 ✶ </span><span class="ticket_clasp"></span></div>
+            <img class="sticker" src="assets/stickers/ribbon.webp" alt="" style="--w:4.6rem;--r:-18deg;top:2rem;right:-1.2rem" decoding="async">
+            <article class="ticket_ticket" aria-labelledby="ticket-027-0027">
+              <div class="ticket_body surface-blue-lined">
+                <p class="ticket_admit"><span>Admit one</span><span>No. 027-0027</span></p>
+                <h3 class="ticket_name" id="ticket-027-0027">Golden Daisy</h3>
+                <p class="ticket_tagline">the soft landing</p>
+                <p class="ticket_price"><span class="ticket_currency">R</span><span class="ticket_amount">3 900</span><span class="ticket_per">per person</span></p>
+                <ul class="ticket_features" role="list">
+                  <li class="ticket_feature"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg><span>Everything in Full Weekend</span></li>
+                  <li class="ticket_feature"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg><span>Pre-pitched bell tent for two</span></li>
+                  <li class="ticket_feature"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg><span>Hot showers + charging lounge</span></li>
+                  <li class="ticket_feature"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg><span>Viewing deck at Big Daisy</span></li>
+                </ul>
+                <button class="button is-butter is-full ticket_cta" type="button" data-tear="Golden Daisy">Go golden<svg class="button_arrow" aria-hidden="true" viewBox="0 0 34 22"><use href="#i-arrow"/></svg></button>
+              </div>
+              <div class="ticket_stub surface-blue-lined" aria-hidden="true">
+                <span class="ticket_stub-type">Gold</span>
+                <svg class="ticket_barcode" viewBox="0 0 121 40" preserveAspectRatio="none"><rect x="0" width="1" height="40"/><rect x="2.5" width="2" height="40"/><rect x="5.5" width="1" height="40"/><rect x="8.5" width="1" height="40"/><rect x="10.5" width="1" height="40"/><rect x="12.5" width="3" height="40"/><rect x="16.5" width="2" height="40"/><rect x="20.5" width="1" height="40"/><rect x="23" width="2" height="40"/><rect x="26.5" width="2" height="40"/><rect x="30" width="3" height="40"/><rect x="34" width="2" height="40"/><rect x="37" width="2" height="40"/><rect x="40" width="1" height="40"/><rect x="43" width="1.5" height="40"/><rect x="46.5" width="2" height="40"/><rect x="50" width="2" height="40"/><rect x="54" width="1" height="40"/><rect x="57" width="1.5" height="40"/><rect x="59.5" width="1" height="40"/><rect x="62" width="3" height="40"/><rect x="66.5" width="1" height="40"/><rect x="69.5" width="1" height="40"/><rect x="72" width="1" height="40"/><rect x="75" width="1" height="40"/><rect x="77.5" width="3" height="40"/><rect x="81.5" width="3" height="40"/><rect x="85.5" width="3" height="40"/><rect x="89.5" width="3" height="40"/><rect x="93.5" width="2" height="40"/><rect x="97.5" width="1" height="40"/><rect x="99.5" width="3" height="40"/><rect x="104" width="3" height="40"/><rect x="108.5" width="1.5" height="40"/><rect x="112" width="1.5" height="40"/><rect x="115" width="1" height="40"/><rect x="117" width="3" height="40"/></svg>
+                <span class="ticket_serial">027-0027</span>
+              </div>
+            </article>
+          </li>
+            </ul>
+            <p class="ticket_note">Prices include booking fees. Wristbands are posted in a padded envelope six weeks before the festival.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ ================================================================ -->
+      <section class="section_faq" id="faq" aria-labelledby="faq-title">
+        <div class="padding-global padding-section-large">
+          <div class="container-large">
+            <header class="faq_header">
+              <h2 class="faq_title scribble-wrap" id="faq-title">good to know.
+                <svg class="scribble is-underline is-orange" viewBox="0 0 300 28" preserveAspectRatio="none" aria-hidden="true" data-draw><path pathLength="1" d="M4.9 8.3 C8.5 10.2 19.4 20.1 26.2 19.9 C32.9 19.8 38.2 6.8 45.4 7.2 C52.6 7.6 62.1 22.1 69.4 22.2 C76.7 22.4 82.7 8.1 89.3 7.8 C95.9 7.5 102.5 20.3 109 20.4 C115.5 20.4 121.5 7.9 128.1 8.2 C134.8 8.6 141.6 23.1 148.9 22.7 C156.2 22.3 164.6 6.2 171.9 5.7 C179.1 5.3 185.8 20 192.3 20.1 C198.9 20.2 204.1 6 211 6.4 C217.8 6.8 226 22.1 233.2 22.4 C240.5 22.8 247.6 8.4 254.4 8.3 C261.2 8.2 267.2 21.8 273.9 21.8 C280.5 21.7 290.7 9.7 294 8 C297.4 6.2 297 8.4 293.9 11.3 C290.8 14.2 282 25.6 275.2 25.5 C268.4 25.4 259.9 10.7 253 10.5 C246.2 10.4 240.6 24.8 233.9 24.4 C227.3 24.1 220.4 8.7 213.2 8.6 C206.1 8.5 198.2 23.6 191.2 23.9 C184.1 24.1 178.1 10.1 171 10.1 C163.9 10 155.4 23.2 148.6 23.5 C141.9 23.7 137.6 11.3 130.7 11.5 C123.7 11.7 114.3 24.9 107 24.6 C99.8 24.3 94 9.9 87.4 9.7 C80.8 9.5 74 23.4 67.6 23.6 C61.2 23.8 56 11 49.1 10.9 C42.2 10.8 33.3 23.2 26.2 23.1 C19.1 23.1 9.8 12.7 6.5 10.6"/></svg>
+              </h2>
+              <p class="label-strip" style="--r:-1.5deg">Still stuck? Ask the info tent, it's open 24 hours.</p>
+            </header>
+            <div class="faq_grid">
+          <details class="faq_note surface-butter" open>
+            <span class="tape-badge is-top is-kraft" aria-hidden="true" style="width:5.5rem;height:1.7rem;padding:0"></span>
+            <summary class="faq_question"><span>Can I bring my own camera?</span><svg class="faq_plus" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-plus"/></svg></summary>
+            <p class="faq_answer">Yes. Film, digital, disposable, whatever you like. Every Full Weekend pass also comes with a 27-exposure film camera, and we develop it for free if you drop it at the gate on Sunday.</p>
+          </details>
+          <details class="faq_note surface-graph">
+            <img class="faq_clip" src="assets/stickers/clip-navy.webp" alt="">
+            <summary class="faq_question"><span>Is there an age limit?</span><svg class="faq_plus" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-plus"/></svg></summary>
+            <p class="faq_answer">Daisy Tapes is 16+. Under-18s need a signed parental consent form at the gate. Kids under 12 come free with an adult on Sunday only.</p>
+          </details>
+          <details class="faq_note surface-lined">
+            <span class="tape-badge is-top is-kraft" aria-hidden="true" style="width:5.5rem;height:1.7rem;padding:0"></span>
+            <summary class="faq_question"><span>How do I get there?</span><svg class="faq_plus" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-plus"/></svg></summary>
+            <p class="faq_answer">Madeliefie Farm is 75 minutes up the West Coast from Cape Town. Shuttles leave the city every two hours from Friday 10:00. Car passes are sold separately.</p>
+          </details>
+          <details class="faq_note surface-lemon">
+            <img class="faq_clip" src="assets/stickers/clip-navy.webp" alt="">
+            <summary class="faq_question"><span>Is the festival cashless?</span><svg class="faq_plus" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-plus"/></svg></summary>
+            <p class="faq_answer">Yes. Top up your wristband online or at any top-up tent. Unused credit is refunded to your card within 14 days of the festival.</p>
+          </details>
+          <details class="faq_note surface-denim-plain">
+            <span class="tape-badge is-top is-kraft" aria-hidden="true" style="width:5.5rem;height:1.7rem;padding:0"></span>
+            <summary class="faq_question"><span>What can&#x27;t I bring?</span><svg class="faq_plus" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-plus"/></svg></summary>
+            <p class="faq_answer">Glass, gas canisters, drones and fireworks. Sealed sunscreen, refillable bottles and folding camping chairs are fine.</p>
+          </details>
+          <details class="faq_note surface-white">
+            <img class="faq_clip" src="assets/stickers/clip-navy.webp" alt="">
+            <summary class="faq_question"><span>Can I get a refund?</span><svg class="faq_plus" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-plus"/></svg></summary>
+            <p class="faq_answer">Tickets are refundable up to 1 August 2027. After that you can resell yours at face value through the official ticket swap.</p>
+          </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- POSTCARD SIGN-UP =================================================== -->
+      <section class="section_signup" id="signup" aria-labelledby="signup-title">
+        <div class="padding-global padding-section-medium">
+          <div class="container-medium">
+            <form class="postcard_component" novalidate data-postcard>
+              <div class="postcard_message">
+                <h2 class="postcard_title" id="signup-title">Wish you were here.</h2>
+                <p class="postcard_note">Line-up drop 02 lands in July. Leave your email and you'll hear before anyone else. One email per drop, nothing else.</p>
+                <p class="postcard_sign">x the Daisy Tapes crew</p>
+              </div>
+              <div class="postcard_address">
+                <div class="stamp postcard_stamp" aria-hidden="true"><div class="stamp_inner"><img src="assets/stickers/sunflower.webp" alt=""></div></div>
+                <svg class="postcard_postmark" viewBox="0 0 120 120" aria-hidden="true" data-postmark>
+                  <circle cx="60" cy="60" r="44" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                  <circle cx="60" cy="60" r="34" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                  <path id="pm-arc" d="M22 60a38 38 0 1 1 76 0a38 38 0 1 1-76 0" fill="none"/>
+                  <text font-family="Space Mono, monospace" font-size="8.5" font-weight="700" letter-spacing="1.5" fill="currentColor"><textPath href="#pm-arc">MADELIEFIE FARM · W. CAPE · 2027 ·</textPath></text>
+                  <text x="60" y="64" text-anchor="middle" font-family="Space Mono, monospace" font-size="11" font-weight="700" fill="currentColor">01 OCT</text>
+                </svg>
+                <div class="postcard_field">
+                  <label class="postcard_label" for="pc-name">To (your name)</label>
+                  <input class="postcard_input" id="pc-name" name="name" type="text" autocomplete="name" placeholder="Sam from Observatory">
+                </div>
+                <div class="postcard_field">
+                  <label class="postcard_label" for="pc-email">Email</label>
+                  <input class="postcard_input" id="pc-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="sam@example.com" required aria-describedby="pc-status">
+                </div>
+                <button class="button is-orange" type="submit" style="justify-self:start">Post it<svg class="button_arrow" aria-hidden="true" viewBox="0 0 34 22"><use href="#i-arrow"/></svg></button>
+                <p class="postcard_status" id="pc-status" role="status" data-postcard-status></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER =============================================================== -->
+    <footer class="footer_component">
+      <div class="paper-bg is-band is-band-top" aria-hidden="true"><div class="paper-bg_sheet surface-night"></div></div>
+      <div class="padding-global">
+        <div class="container-large" style="position:relative">
+          <p class="footer_headline" aria-hidden="true"><span>Memories</span><span>that stick.</span></p>
+          <img class="sticker is-hover footer_sticker" src="assets/stickers/star-denim-c.webp" alt="" style="--w:clamp(4.5rem,9vw,8rem);--r:14deg;right:4%;top:0">
+          <img class="sticker is-hover footer_sticker is-smiley" src="assets/stickers/smiley.webp" alt="" style="--w:clamp(3.5rem,6vw,5.5rem);--r:-12deg;right:15%;top:9rem">
+          <div class="footer_grid">
+            <div class="footer_col is-about">
+              <p class="nav_logo" style="width:fit-content"><img class="nav_logo-mark" src="assets/stickers/sunflower.webp" alt=""><span class="nav_logo-text"><span class="nav_logo-name" style="color:var(--ink)">Daisy Tapes</span><span class="nav_logo-year" style="color:var(--ink)">'27 · West Coast</span></span></p>
+              <p class="footer_blurb">Fri 01 – Sun 03 October 2027 at Madeliefie Farm, 75 minutes up the West Coast from Cape Town.</p>
+            </div>
+            <div class="footer_col">
+              <p class="footer_label">Festival</p>
+              <ul class="footer_list" role="list">
+                <li><a class="footer_link" href="#lineup">Line-up</a></li>
+                <li><a class="footer_link" href="#schedule">Schedule</a></li>
+                <li><a class="footer_link" href="#map" data-open-map>Map</a></li>
+                <li><a class="footer_link" href="#tickets">Tickets</a></li>
+              </ul>
+            </div>
+            <div class="footer_col">
+              <p class="footer_label">Info</p>
+              <ul class="footer_list" role="list">
+                <li><a class="footer_link" href="#faq">Good to know</a></li>
+                <li><a class="footer_link" href="#faq">Getting there</a></li>
+                <li><a class="footer_link" href="#faq">Refunds</a></li>
+              </ul>
+            </div>
+            <div class="footer_col">
+              <p class="footer_label">Follow</p>
+              <ul class="footer_list" role="list">
+                <li><span class="label-strip" style="--r:-2deg">@daisytapes</span></li>
+                <li><span class="label-strip is-acid" style="--r:1.5deg">#memoriesthatstick</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer_legal">
+            <span>Daisy Tapes is a fictional festival used to demo the Analog Scrapbook design system.</span>
+            <a class="footer_link" href="#top">Back to top ↑</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="mobile-cta" data-mobile-cta>
+      <a class="button is-full is-large" href="#tickets">Tickets from R650<svg class="button_arrow" aria-hidden="true" viewBox="0 0 34 22"><use href="#i-arrow"/></svg></a>
+    </div>
+    <p class="toast" role="status" aria-live="polite" hidden data-toast></p>
+  </div>
+
+  <script src="js/scrapbook.js" defer></script>
+</body>
+</html>

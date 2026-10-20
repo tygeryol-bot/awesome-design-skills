@@ -400,6 +400,18 @@ Each skill now ships as a folder with:
   </tr>
 </table>
 
+### Templates in this fork
+
+<table>
+  <tr>
+    <td align="center" width="33%" valign="top">
+      <a href="./templates/scrapbook-festival"><img src="./registry-examples/scrapbook-marketing.png" alt="Scrapbook festival template" width="260" /></a><br />
+      <a href="./skills/scrapbook"><b>Scrapbook</b></a><br />
+      <sub>Festival site + Webflow build guide: <a href="./templates/scrapbook-festival/WEBFLOW.md"><code>templates/scrapbook-festival</code></a></sub>
+    </td>
+  </tr>
+</table>
+
 ## Quick Start
 
 Pull any design skill directly into your project using the [TypeUI CLI](https://github.com/bergside/typeui.sh):

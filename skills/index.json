@@ -400,5 +400,11 @@
     "name": "Terracotta",
     "skillPath": "skills/terracotta/SKILL.md",
     "designPath": "skills/terracotta/DESIGN.md"
+  },
+  "scrapbook": {
+    "slug": "scrapbook",
+    "name": "Scrapbook",
+    "skillPath": "skills/scrapbook/SKILL.md",
+    "designPath": "skills/scrapbook/DESIGN.md"
   }
 }
