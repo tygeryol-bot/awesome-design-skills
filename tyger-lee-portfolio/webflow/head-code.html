@@ -1,0 +1,83 @@
+<!-- Tyger Lee portfolio · Webflow head code (Site settings → Custom code → Head code).
+     OPTIONAL: needs a paid Site plan or Workspace plan. Everything here is enhancement;
+     WEBFLOW.md lists the native fallback for each rule. Keep the Webflow class names identical to the
+     local build (tl-*, is-*) or these selectors will not match. -->
+<style>
+:root { --tl-handle: url("PASTE-HANDLE-SVG-ASSET-URL"); --tl-handle-dark: url("PASTE-HANDLE-DARK-SVG-ASSET-URL"); }
+
+/* Selection box (brand device): frame + 8 square handles drawn with pseudo-elements.
+   Native fallback: two absolutely positioned divs (.tl-sel-frame, .tl-sel-handles) — see WEBFLOW.md §5. */
+.tl-select { position: relative; }
+.tl-select::before, .tl-select::after,
+.tl-nav-link::before, .tl-nav-link::after,
+.tl-frame::before, .tl-frame::after { content: ""; position: absolute; pointer-events: none; }
+.tl-select::before, .tl-nav-link::before, .tl-frame::before {
+  inset: calc(var(--tl-sel-pad, 10px) * -1);
+  border: var(--tl-sel-stroke, 2px) solid var(--tl-sel-color, #F90001);
+}
+.tl-select::after, .tl-nav-link::after, .tl-frame::after {
+  inset: calc(var(--tl-sel-pad, 10px) * -1 - var(--tl-handle-size, 12px) / 2 + var(--tl-sel-stroke, 2px) / 2);
+  background-image: var(--tl-handle), var(--tl-handle), var(--tl-handle), var(--tl-handle),
+                    var(--tl-handle), var(--tl-handle), var(--tl-handle), var(--tl-handle);
+  background-position: 0 0, 50% 0, 100% 0, 0 50%, 100% 50%, 0 100%, 50% 100%, 100% 100%;
+  background-size: var(--tl-handle-size, 12px) var(--tl-handle-size, 12px);
+  background-repeat: no-repeat;
+}
+.tl-select.is-dark { --tl-sel-color: #231F20; --tl-handle: var(--tl-handle-dark); }
+.tl-hero-title { --tl-sel-pad: 0.07em; }
+.tl-contact-title { --tl-sel-pad: 0.06em; }
+.tl-case-title { --tl-sel-pad: 0.07em; }
+.tl-about-portrait { --tl-sel-pad: 14px; }
+.tl-frame { --tl-sel-pad: 8px; }
+.tl-nav-link { --tl-sel-pad: 0px; --tl-sel-stroke: 1.5px; --tl-handle-size: 7px; }
+.tl-nav-link::before, .tl-nav-link::after { opacity: 0; transition: opacity .25s; }
+.tl-nav-link.w--current::before, .tl-nav-link.w--current::after,
+.tl-nav-link.is-current::before, .tl-nav-link.is-current::after { opacity: 1; }
+.tl-frame::before, .tl-frame::after { z-index: 3; opacity: 0; transition: opacity .25s, transform .35s cubic-bezier(.2,.7,.1,1); }
+.tl-frame:not(.is-static):hover::before, .tl-frame:not(.is-static):hover::after,
+.tl-project:focus-within .tl-frame:not(.is-static)::before,
+.tl-project:focus-within .tl-frame:not(.is-static)::after { opacity: 1; }
+
+/* Oversized type that spans the full grid (JS measures the font and sets --tl-fit).
+   Native fallback: plain vw font sizes per breakpoint — see WEBFLOW.md §4. */
+.tl-hero-name-wrap, .tl-contact, .tl-footer { container-type: inline-size; }
+.tl-hero-title { font-size: min(calc(var(--tl-fit, 0.2212) * 100cqi), 38vh); }
+.tl-contact-title { font-size: calc(var(--tl-fit, 0.1236) * 100cqi); }
+.tl-footer-mark { font-size: calc(var(--tl-fit, 0.1379) * 100cqi); }
+.tl-project.is-split .tl-project-body { container-type: inline-size; }
+.tl-project.is-split .tl-project-title { font-size: min(clamp(40px, 7.2vw, 116px), 15.5cqi); }
+.tl-project.is-split.is-reverse .tl-project-title { font-size: min(clamp(40px, 7.2vw, 116px), 19cqi); }
+@media screen and (max-width: 767px) {
+  .tl-project.is-split .tl-project-title, .tl-project.is-split.is-reverse .tl-project-title { font-size: clamp(40px, 7.2vw, 116px); }
+}
+
+/* Scroll reveals driven by footer-code JS. Native fallback: Webflow Interactions → Scroll into view. */
+.tl-js [data-tl-reveal] { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.2,.7,.1,1), transform .9s cubic-bezier(.2,.7,.1,1); }
+.tl-js [data-tl-reveal="wipe"] { opacity: 1; transform: none; clip-path: inset(-20% -20% 100% -20%); transition: clip-path 1s cubic-bezier(.2,.7,.1,1); }
+.tl-js [data-tl-reveal].is-in { opacity: 1; transform: none; }
+.tl-js [data-tl-reveal="wipe"].is-in { clip-path: inset(-20% -20% -20% -20%); }
+html.tl-locked { overflow: hidden; }
+
+/* Placeholder flags (remove the data-tl-placeholder attribute once real content is in). */
+[data-tl-placeholder] { outline: 1.5px dashed currentColor; outline-offset: 3px; }
+[data-tl-placeholder]::after { content: "\2691  " attr(data-tl-placeholder); display: inline-block; margin-left: 10px; padding: 4px 6px; background: #231F20; color: #fff; font: 600 11px/1 "Space Grotesk", sans-serif; letter-spacing: .06em; text-transform: uppercase; vertical-align: middle; }
+
+/* Hero entrance + small loops. Native fallback: Webflow Interactions → Page load. */
+.tl-hero-word { animation: tl-rise .9s cubic-bezier(.2,.7,.1,1) both; }
+.tl-hero-line.is-second .tl-hero-word { animation-delay: .12s; }
+.tl-hero-title.tl-select::before { animation: tl-draw .9s .35s cubic-bezier(.2,.7,.1,1) both; }
+.tl-hero-title.tl-select::after { animation: tl-fade .4s 1s both; }
+.tl-hero-figure { animation: tl-pop .9s .45s cubic-bezier(.2,.7,.1,1) both; }
+.tl-dot { animation: tl-blink 2.4s steps(1) infinite; }
+@keyframes tl-rise { from { opacity: 0; transform: translateY(.22em); } to { opacity: 1; transform: none; } }
+@keyframes tl-draw { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0); } }
+@keyframes tl-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes tl-pop { from { opacity: 0; transform: translateY(48px) rotate(3deg); } to { opacity: 1; transform: rotate(-1.5deg); } }
+@keyframes tl-blink { 50% { opacity: .25; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .tl-js [data-tl-reveal], .tl-js [data-tl-reveal="wipe"] { opacity: 1; transform: none; clip-path: none; }
+}
+</style>

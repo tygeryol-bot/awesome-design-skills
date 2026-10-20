@@ -1,0 +1,159 @@
+/* ==========================================================================
+   TYGER LEE — PORTFOLIO · interactions
+   Vanilla JS, no dependencies, ~3 KB. Everything degrades gracefully:
+   without JS all content is visible, anchors scroll natively and case files
+   open inline via :target.
+   Webflow: paste inside <script>…</script> in Site settings → Custom code →
+   Footer code (see webflow/footer-code.html).
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  var root = document.documentElement;
+  root.classList.add('tl-js');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* 1 · Scroll progress (thin red bar under the nav) ---------------------- */
+  var bar = document.querySelector('[data-tl-progress]');
+  var ticking = false;
+  function paintProgress() {
+    ticking = false;
+    var max = root.scrollHeight - window.innerHeight;
+    var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    bar.style.transform = 'scaleX(' + p.toFixed(4) + ')';
+  }
+  if (bar) {
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(paintProgress); }
+    }, { passive: true });
+    window.addEventListener('resize', paintProgress);
+    paintProgress();
+  }
+
+  /* 2 · Current section → nav selection box + "Viewing —" label ----------- */
+  var navLinks = document.querySelectorAll('[data-tl-nav]');
+  var nowLabel = document.querySelector('[data-tl-now]');
+  function setCurrent(section) {
+    var key = section.getAttribute('data-tl-section');
+    navLinks.forEach(function (link) {
+      var on = link.getAttribute('data-tl-nav') === key;
+      link.classList.toggle('is-current', on);
+      if (on) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    if (nowLabel) nowLabel.textContent = section.getAttribute('data-tl-label') || '';
+  }
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { if (entry.isIntersecting) setCurrent(entry.target); });
+    }, { rootMargin: '-45% 0px -54% 0px' });
+    document.querySelectorAll('[data-tl-section]').forEach(function (s) { spy.observe(s); });
+  }
+
+  /* 3 · Reveal on scroll --------------------------------------------------- */
+  var revealEls = document.querySelectorAll('[data-tl-reveal]');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealEls.forEach(function (el) { el.classList.add('is-in'); });
+  } else {
+    // "wipe" elements start fully clipped, and fully clipped elements never
+    // report as intersecting, so we watch their parent instead.
+    var watched = new Map();
+    revealEls.forEach(function (el) {
+      var target = el.getAttribute('data-tl-reveal') === 'wipe' ? el.parentElement : el;
+      if (!watched.has(target)) watched.set(target, []);
+      watched.get(target).push(el);
+    });
+    var revealer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        watched.get(entry.target).forEach(function (el) { el.classList.add('is-in'); });
+        revealer.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
+    watched.forEach(function (els, target) { revealer.observe(target); });
+  }
+
+  /* 4 · Fit oversized type to the full grid width --------------------------
+     CSS sizes [data-tl-fit] as --tl-fit × 100cqi. Here we measure the real
+     font (Akira Expanded once installed, the fallback until then) and store
+     the exact ratio, so the word always spans edge to edge.                 */
+  function fitType() {
+    document.querySelectorAll('[data-tl-fit]').forEach(function (el) {
+      var word = el.querySelector('[data-tl-fit-word]');
+      if (!word) return;
+      var size = parseFloat(window.getComputedStyle(el).fontSize);
+      var width = word.getBoundingClientRect().width;
+      if (size && width) el.style.setProperty('--tl-fit', (size / width * 0.995).toFixed(4));
+    });
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitType);
+  else window.addEventListener('load', fitType);
+
+  /* 5 · Case files (native <dialog>) --------------------------------------- */
+  var returnFocusTo = null;
+
+  function openCase(id, trigger) {
+    var dialog = document.getElementById(id);
+    if (!dialog || typeof dialog.showModal !== 'function') return false;
+
+    var current = document.querySelector('dialog.tl-case[open]');
+    if (current && current !== dialog) {
+      current.setAttribute('data-tl-switching', '');
+      current.close();
+    }
+    if (trigger && !trigger.closest('dialog')) {
+      // Decorative image links are aria-hidden: return focus to the visible button instead.
+      var project = trigger.closest('.tl-project');
+      returnFocusTo = (project && project.querySelector('.tl-btn')) || trigger;
+    }
+    if (!dialog.open) dialog.showModal();
+    root.classList.add('tl-locked');
+    var sheet = dialog.querySelector('.tl-case-sheet');
+    if (sheet) sheet.scrollTop = 0;
+    var closeBtn = dialog.querySelector('[data-tl-close]');
+    if (closeBtn) closeBtn.focus();
+    if (window.history.replaceState) window.history.replaceState(null, '', '#' + id);
+    return true;
+  }
+
+  document.addEventListener('click', function (event) {
+    var opener = event.target.closest('[data-tl-case]');
+    if (opener) {
+      if (openCase(opener.getAttribute('data-tl-case'), opener)) event.preventDefault();
+      return;
+    }
+    var closer = event.target.closest('[data-tl-close]');
+    if (closer) {
+      var dialog = closer.closest('dialog');
+      if (dialog) dialog.close();
+    }
+  });
+
+  document.querySelectorAll('dialog.tl-case').forEach(function (dialog) {
+    // A click on the dialog element itself can only be the backdrop.
+    dialog.addEventListener('click', function (event) {
+      if (event.target === dialog) dialog.close();
+    });
+    dialog.addEventListener('close', function () {
+      if (dialog.hasAttribute('data-tl-switching')) {
+        dialog.removeAttribute('data-tl-switching');
+        return;
+      }
+      root.classList.remove('tl-locked');
+      if (window.history.replaceState) {
+        window.history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+      if (returnFocusTo) {
+        returnFocusTo.focus({ preventScroll: true });
+        returnFocusTo = null;
+      }
+    });
+  });
+
+  // Deep links: /#case-inform opens that case file, on load or when the hash changes.
+  function openFromHash() {
+    if (/^#case-[\w-]+$/.test(window.location.hash)) openCase(window.location.hash.slice(1), null);
+  }
+  window.addEventListener('hashchange', openFromHash);
+  openFromHash();
+})();
