@@ -20,7 +20,7 @@ This is a conceptual design study. It is not an official or surveyed site plan f
 | `output/rtd2027_site_oblique.png` | Slightly elevated orthographic view, 3840 × 2160 px. |
 | `output/rtd2027_site_top_layout_preview.png` | Preview of terrain, water, roads, paths, arena and camping grounds, rendered before any props were added. |
 | `output/rocking_the_daisies_2027_site_layout_preview.blend` | The layout-stage scene. |
-| `output/details/*.png` | Full-resolution crops used for the final quality check. |
+| `output/details/*.png` | Full-resolution crops of the arena and entrance, general and wildflower camping, and priority camping and glamping, used for the final quality check. |
 
 ## How to run
 
@@ -56,7 +56,10 @@ pip install bpy        # the wheel needs a matching Python version (3.13 for bpy
 python festival_site.py --out ./output --views top,oblique
 ```
 
-The renders in `output/` were made this way, using `bpy` 5.2.2 LTS on a 4-core CPU with no GPU.
+The renders in `output/` were made this way, using `bpy` 5.2.2 LTS on a 4-core CPU with no GPU. Building the full scene takes about 25 s. The render times were:
+- Top view at 4800 × 3200, 64 samples: about 18 minutes.
+- Oblique view at 3840 × 2160: about 10 minutes.
+- Layout preview at 2400 × 1600, 32 samples: about 2.5 minutes.
 
 ## Build stages
 
@@ -108,7 +111,7 @@ An extra **Asset Library (not rendered)** collection holds one reference object 
 
 ### Reusable assets and instancing
 
-Each repeated asset is built once by its own function and placed as a **linked duplicate**: a new object that shares the asset's mesh, so Cycles instances it. The full scene has about 6,700 objects but only about 100 unique meshes. Per-object colour variation comes from `Object Info › Random` driving a constant colour ramp, so one mesh and one material give, for example, a whole field of differently coloured tents.
+Each repeated asset is built once by its own function and placed as a **linked duplicate**: a new object that shares the asset's mesh, so Cycles instances it. The full scene has 6,652 objects but only 103 unique meshes. Per-object colour variation comes from `Object Info › Random` driving a constant colour ramp, so one mesh and one material give, for example, a whole field of differently coloured tents.
 
 The asset functions are:
 - Trees and plants: `asset_tree` (several variants), `asset_umbrella`, `asset_conifer`, `asset_shrub`, `asset_reeds`, `asset_rock`, `asset_flower_mound`.
@@ -119,6 +122,16 @@ The asset functions are:
 - Vehicles: `asset_car`, `asset_van`, `asset_ambulance`, `asset_bus`, `asset_truck`.
 
 Small assets get real bevels: chamfered edges are baked into the mesh with `bmesh.ops.bevel`, which keeps them instanceable. Ground layers such as zones, paths and hard standings are raised slabs with a bevel modifier, so they catch light like the layers of a physical model.
+
+## Quality checks on the final .blend
+
+| Check | Result |
+| --- | --- |
+| Tents and gazebos inside their own camping zone | 1,050 of 1,050 |
+| Smallest gap between a tent footprint and the edge of any path, road or service route | 0.7 m, so no tent is pitched across an access route |
+| Tree trunks standing on a path or road surface | 0 of 2,668 |
+| Text or font objects, and image textures | 0 and 0. All surfaces are procedural materials. |
+| Tents per zone | General 578, priority 161, wildflower 182, glamping village 100 units |
 
 ## Rendering notes
 
