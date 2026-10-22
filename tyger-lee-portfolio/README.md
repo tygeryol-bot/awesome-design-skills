@@ -87,7 +87,6 @@ Each frame currently holds a clearly labelled **FPO ("for placement only") place
 | The Fridge Habit | 3 × 4:5 (key visual, social post, poster) | Poster/outdoor, 3:4 |
 
 **Text and links**
-- **Contact email.** Currently `hello@example.com`, appearing twice in `index.html`.
 - **Instagram / Behance / LinkedIn URLs.** Contact uses placeholders; the footer has a commented-out block ready to switch on.
 - **The Fridge Habit.** One line on what the habit is and who the campaign speaks to.
 - **Creative direction.** 2–3 sentences per project, inside each case file.
