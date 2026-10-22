@@ -82,6 +82,8 @@ blender --background --python process_render.py -- --out ./output/process_frames
 python3 process_compose.py --frames ./output/process_frames --final ./output/rtd2027_site_top.png --out ./output/process
 ```
 
+The included videos are 59 seconds long, 1920 × 1080 at 30 fps, H.264, about 16 MB each. On the same 4-core CPU the 36 frames took about 23 minutes to render at 12 samples, and composing both videos took about 4 minutes.
+
 `process_render.py` imports `festival_site.py` and calls its build functions one at a time. It records which objects each function creates and reveals them cumulatively by toggling their render visibility, so every frame shows the real scene at that point in the build. The frames are intermediate files, and `output/process_frames/` is git-ignored.
 
 ## Build stages
