@@ -21,6 +21,9 @@ This is a conceptual design study. It is not an official or surveyed site plan f
 | `output/rtd2027_site_top_layout_preview.png` | Preview of terrain, water, roads, paths, arena and camping grounds, rendered before any props were added. |
 | `output/rocking_the_daisies_2027_site_layout_preview.blend` | The layout-stage scene. |
 | `output/details/*.png` | Full-resolution crops of the arena and entrance, general and wildflower camping, and priority camping and glamping, used for the final quality check. |
+| `output/process/rtd2027_build_process.mp4` | Build-process video, 1920 × 1080 at 30 fps, with no text. |
+| `output/process/rtd2027_build_process_captioned.mp4` | The same video with stage captions and a progress bar. |
+| `process_render.py`, `process_compose.py` | The scripts that render the process frames and assemble the video. |
 
 ## How to run
 
@@ -60,6 +63,26 @@ The renders in `output/` were made this way, using `bpy` 5.2.2 LTS on a 4-core C
 - Top view at 4800 × 3200, 64 samples: about 18 minutes.
 - Oblique view at 3840 × 2160: about 10 minutes.
 - Layout preview at 2400 × 1600, 32 samples: about 2.5 minutes.
+
+## Process video
+
+`output/process/` holds a timelapse of the model being built, about one minute long. It follows the same stage order as the script:
+
+1. **Planning.** The site plan is drawn onto the empty display base in three layers: the 50 m grid, then the zones, arena and dam, then the roads, paths and hard standings. It is projected into the same camera view, so it lines up exactly with the model that replaces it.
+2. **Stages 1–7.** Each build step dissolves into the next: terrain, dam, road, service routes, paths, arena, the stages, food courts, camping grounds, tents zone by zone, car parks and cars, entrances, woodland growing in from the site edge, landscaping, then facilities. These frames use flat, neutral light, because `festival_site.py` only creates its lights at the end.
+3. **Stage 8.** The sun, sky and final colour settings arrive, and the camera moves to the top-down view.
+4. **Stage 9.** The final 4800 × 3200 render, with a slow zoom over the arena and the glamping village before pulling back out.
+
+To make it yourself:
+
+```bash
+# 1) render one frame per build step (35 steps plus the lit frame)
+blender --background --python process_render.py -- --out ./output/process_frames --res 1920 --samples 12
+# 2) assemble the videos (needs Python 3 with numpy and Pillow, plus ffmpeg)
+python3 process_compose.py --frames ./output/process_frames --final ./output/rtd2027_site_top.png --out ./output/process
+```
+
+`process_render.py` imports `festival_site.py` and calls its build functions one at a time. It records which objects each function creates and reveals them cumulatively by toggling their render visibility, so every frame shows the real scene at that point in the build. The frames are intermediate files, and `output/process_frames/` is git-ignored.
 
 ## Build stages
 
