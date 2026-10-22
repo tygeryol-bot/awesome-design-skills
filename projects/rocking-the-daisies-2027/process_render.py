@@ -16,6 +16,7 @@ Run (Blender 4.2+ / 5.x, or the pip `bpy` module):
     blender --background --python process_render.py -- --out ./output/process_frames
     python process_render.py --out ./output/process_frames         # pip bpy
 Options: --res 1920 (width, 16:9)  --samples 12  --seed 2027
+         --only 1,2   re-render just these step indices (manifest is rewritten)
 """
 
 import argparse
@@ -59,6 +60,7 @@ def parse_args():
     p.add_argument("--res", type=int, default=1920)
     p.add_argument("--samples", type=int, default=12)
     p.add_argument("--seed", type=int, default=fs.CONFIG["seed"])
+    p.add_argument("--only", default="", help="comma-separated step indices to (re)render")
     a, _ = p.parse_known_args(argv)
     return a
 
@@ -96,6 +98,10 @@ def build_and_plan_steps(seed):
     P = fs.make_plan(seed)
     terrain = recorded(fs.build_terrain, P)
     lake = recorded(fs.build_lake, P)
+    # excavated basin floor, so the terrain step shows a dug-out dam instead of
+    # an open hole into the hollow plinth (hidden under the water afterwards)
+    basin = fs.slab("Lake_Basin_Floor", fs.offset_poly(P.lake, 4.6), -0.7, -1.2,
+                    fs.MATS["shore_mud"], fs.C("Lake"))
     roads = recorded(fs.build_roads_paths, P)
     grounds = recorded(fs.build_grounds, P)
     park_ground = recorded(fs.build_parking_ground, P)
@@ -129,8 +135,9 @@ def build_and_plan_steps(seed):
     S = []  # (stage, caption, objects revealed at this step)
     S.append((0, "Display base and the planning pass: zones, routes and occupancy masks",
               named(terrain, "Display_Base")))
-    S.append((1, "1000 x 660 m terrain on a model plinth", not_named(terrain, "Display_Base")))
-    S.append((2, "Dam: recessed water, shore slope and depth gradient", lake))
+    S.append((1, "1000 x 660 m terrain on a model plinth, with the dam basin cut out",
+              not_named(terrain, "Display_Base") + [basin] + named(lake, "Lake_Shore")))
+    S.append((2, "Dam: water surface with depth gradient", named(lake, "Lake_Water")))
     S.append((2, "Public access road, markings and asphalt spurs", named(roads, "Access_")))
     S.append((2, "Gravel service and emergency routes", named(roads, "Service_")))
     S.append((2, "Pedestrian path network", named(roads, "Walking_", "Glamping_Paths")))
@@ -245,14 +252,16 @@ def main():
         o.hide_render = True
     manifest = {"width": W, "height": H, "stages": STAGES, "steps": [],
                 "plan": plan_overlay(P, obl, sc, W, H)}
+    only = {int(k) for k in a.only.split(",") if k.strip()}
     for i, (stage, caption, objs) in enumerate(steps):
         for o in objs:
             o.hide_render = False
         path = os.path.join(a.out, f"step_{i:02d}.png")
-        sc.render.filepath = path
-        t = time.time()
-        bpy.ops.render.render(write_still=True)
-        fs.log(f"step {i:02d} [stage {stage}] {caption} - {len(objs)} objects, {time.time() - t:.0f}s")
+        if not only or i in only:
+            sc.render.filepath = path
+            t = time.time()
+            bpy.ops.render.render(write_still=True)
+            fs.log(f"step {i:02d} [stage {stage}] {caption} - {len(objs)} objects, {time.time() - t:.0f}s")
         manifest["steps"].append({"file": os.path.basename(path), "stage": stage, "caption": caption,
                                   "objects": len(objs)})
     # stage 8: final materials, sun and sky
@@ -260,8 +269,9 @@ def main():
     bg.inputs["Color"].default_value = final_light[0]
     bg.inputs["Strength"].default_value = final_light[1]
     path = os.path.join(a.out, f"step_{len(steps):02d}.png")
-    sc.render.filepath = path
-    bpy.ops.render.render(write_still=True)
+    if not only or len(steps) in only:
+        sc.render.filepath = path
+        bpy.ops.render.render(write_still=True)
     manifest["steps"].append({"file": os.path.basename(path), "stage": 8,
                               "caption": "Sun, sky and colour management applied", "objects": 0})
     with open(os.path.join(a.out, "manifest.json"), "w") as f:
