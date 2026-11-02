@@ -1,0 +1,24 @@
+.hero_shortcuts { position: relative; z-index: 3; margin-top: clamp(1.25rem, 2.5vw, 2.25rem); }
+.hero_shortcut-list { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.9rem; margin: 0; padding: 0; list-style: none; }
+.hero_shortcut-item { position: relative; display: flex; }
+.hero_shortcut { position: relative; display: flex; align-items: center; gap: 0.7rem; width: 100%; min-height: 4.6rem; padding: 0.8rem 0.9rem; color: var(--_scrapbook---ink); text-decoration: none; background-color: var(--_scrapbook---paper-white); box-shadow: 0 1px 1px rgba(22, 19, 15, 0.16), 0 12px 16px -12px rgba(22, 19, 15, 0.6); transform: rotate(var(--r)); transition: transform var(--dur) var(--ease-back), box-shadow var(--dur), background-color var(--dur); }
+.hero_shortcut:hover { background-color: var(--_scrapbook---butter); transform: rotate(0deg) translateY(-4px); box-shadow: 0 2px 2px rgba(22, 19, 15, 0.16), 0 20px 22px -12px rgba(22, 19, 15, 0.6); }
+.hero_shortcut.is-tickets { background-color: var(--_scrapbook---acid); }
+.hero_shortcut-icon { width: 2.6rem; height: 2.6rem; object-fit: contain; flex: none; transition: transform var(--dur-slow) var(--ease-back); }
+.hero_shortcut-text { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.hero_shortcut-label { font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; font-weight: 900; font-size: 1.25rem; line-height: 0.95; text-transform: uppercase; }
+.hero_shortcut-kicker { font-family: "Space Mono", ui-monospace, Menlo, monospace; font-size: 0.66rem; line-height: 1.2; letter-spacing: 0.08em; text-transform: uppercase; color: var(--_scrapbook---ink-soft); }
+.hero_shortcut-arrow { margin-left: auto; font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; font-size: 1.5rem; line-height: 1; transition: transform var(--dur) var(--ease-back); }
+@media screen and (max-width: 991px) {
+.hero_shortcut-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media screen and (max-width: 767px) {
+.hero_shortcut-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; }
+.hero_shortcut { min-height: 4rem; padding: 0.7rem 0.75rem; gap: 0.55rem; }
+.hero_shortcut-icon { width: 2.1rem; height: 2.1rem; }
+.hero_shortcut-label { font-size: 1.12rem; }
+}
+@media screen and (max-width: 479px) {
+.hero_shortcut-kicker { display: none; }
+.hero_shortcut-arrow { display: none; }
+}

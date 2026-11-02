@@ -1,0 +1,14 @@
+.ticket_phases { display: flex; flex-wrap: wrap; gap: 0.6rem 0.9rem; margin: 0 0 clamp(3rem, 5vw, 4rem); padding: 0; list-style: none; }
+.ticket_phase-tag { display: inline-flex; align-items: baseline; gap: 0.6rem; padding: 0.5rem 0.85rem; font-family: "Space Mono", ui-monospace, Menlo, monospace; font-size: 0.8rem; line-height: 1.2; letter-spacing: 0.06em; text-transform: uppercase; color: #d9d3c4; border: 1.5px dashed rgba(255, 253, 246, 0.4); transform: rotate(-1deg); }
+.ticket_phase-name { font-weight: 700; }
+.ticket_phase-state { font-size: 0.72rem; opacity: 0.85; }
+.ticket_phase-tag.is-live { color: var(--_scrapbook---ink); background-color: var(--_scrapbook---acid); border-style: solid; border-color: var(--_scrapbook---acid); transform: rotate(1.2deg); }
+.ticket_phase-tag.is-next { border-style: solid; border-color: rgba(255, 253, 246, 0.25); transform: rotate(-0.4deg); }
+.ticket_grid.is-two { grid-template-columns: repeat(2, minmax(0, 25rem)); justify-content: center; gap: clamp(2.5rem, 4vw, 3rem) clamp(2rem, 4vw, 3.5rem); }
+@media screen and (max-width: 991px) {
+.ticket_grid.is-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media screen and (max-width: 767px) {
+.ticket_phases { margin-bottom: 2.75rem; }
+.ticket_grid.is-two { grid-template-columns: 1fr; max-width: 26rem; margin-left: auto; margin-right: auto; }
+}

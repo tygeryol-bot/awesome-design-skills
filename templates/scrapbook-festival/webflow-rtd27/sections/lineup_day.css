@@ -1,0 +1,9 @@
+.lineup_days { display: flex; flex-direction: column; gap: clamp(2.75rem, 5vw, 4.25rem); }
+.lineup_day { display: flex; flex-direction: column; gap: clamp(1.5rem, 3vw, 2.25rem); }
+.lineup_day-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 1.25rem; padding-bottom: 0.9rem; border-bottom: 2px dashed rgba(22, 19, 15, 0.3); }
+.lineup_day-name { margin: 0; font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; font-weight: 900; font-size: clamp(2.6rem, 1.6rem + 3.4vw, 4.4rem); line-height: 0.85; text-transform: uppercase; color: var(--_scrapbook---ink); }
+.lineup_day-line { margin: 0; font-family: "Permanent Marker", "Marker Felt", "Comic Sans MS", cursive; font-size: clamp(1.35rem, 1.1rem + 1vw, 2rem); line-height: 1.1; color: var(--_scrapbook---neon-orange); transform: rotate(-2deg); }
+.lineup_day-text { width: 100%; max-width: 36rem; margin: 0; font-size: 1.05rem; line-height: 1.45; color: var(--_scrapbook---ink-soft); }
+@media screen and (max-width: 479px) {
+.lineup_day-head { gap: 0.3rem 0.9rem; }
+}
