@@ -17,6 +17,15 @@ These are the files pasted into the Webflow page (site `6ace5c0da0bb66017f9854b5
 | `content.py` | Line-up, prices and FAQ copy in one place |
 | `components.css` | Source CSS for the new components |
 
+## Rebuild in Tyger Lee's Workspace (site `6ae9b5983a11fb874e346b43`)
+
+The whole page was rebuilt on the new site with two changes:
+
+- **White stamp logo** (`rebuild/rtd-stamp.webp`, the navy background removed) in the header top-left, the mobile menu, the hero note corner, the sign-up postcard and the footer.
+- **Less grain:** the grain texture opacity in `--tex-grain` and `--tex-grain-light` drops from `1.15 / 1.3` to `0.5 / 0.55`, about 55–60% lighter.
+
+The `rebuild/` folder holds the three embeds exactly as they are stored on the new site.
+
 ## Things to confirm before launch
 
 - **Weekdays:** 2–4 October 2027 is a Saturday to Monday, but the document uses Friday / Saturday / Sunday. The site shows day names without dates in the line-up and the dates without day names elsewhere.
