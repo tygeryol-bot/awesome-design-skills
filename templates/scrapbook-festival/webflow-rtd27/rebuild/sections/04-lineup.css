@@ -1,0 +1,44 @@
+.padding-global.padding-section-small { padding-top: clamp(2rem, 1.5rem + 2vw, 3rem); padding-bottom: clamp(2rem, 1.5rem + 2vw, 3rem); }
+.lineup_component { position: relative; isolation: isolate; padding: clamp(2rem, 1rem + 4vw, 4.5rem) clamp(1.25rem, 0.5rem + 3.6vw, 4rem) clamp(2.5rem, 1rem + 4vw, 4.5rem) clamp(2.75rem, 1.5rem + 4.5vw, 5.5rem); }
+.lineup_header { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 1.5rem 2rem; margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.lineup_kicker { font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.6rem); font-weight: 600; line-height: 1; color: var(--_scrapbook---ink-navy); margin-bottom: 0.75rem; font-family: Fraunces, Georgia, "Times New Roman", serif; }
+.ransom { display: flex; flex-wrap: wrap; align-items: center; gap: 0.18em 0.06em; font-size: var(--ransom-size, var(--text-h2)); line-height: 1; }
+.ransom_word { display: inline-flex; gap: 0.06em; margin-right: 0.3em; white-space: nowrap; }
+.ransom_tile { position: relative; display: inline-grid; place-items: center; min-width: 0.78em; padding: 0.08em 0.12em 0.1em; font-size: var(--k, 1em); line-height: 0.95; text-transform: uppercase; box-shadow: 0 1px 1px rgba(22, 19, 15, 0.3), 0 4px 5px -2px rgba(22, 19, 15, 0.35); transform: translateY(var(--y)) rotate(var(--r)); transition: transform var(--dur) var(--ease-back); }
+.ransom_tile.is-v1 { font-weight: 900; background: #141414; color: var(--_scrapbook---paper-white); font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; }
+.ransom_tile.is-v5 { font-weight: 900; background: var(--_scrapbook---denim); color: var(--_scrapbook---paper-white); font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; }
+.ransom_tile.is-v7 { font-weight: 900; background: #141414; color: var(--_scrapbook---acid); font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; }
+.ransom_tile.is-v3 { font-weight: 900; background: #ece4cf; color: var(--_scrapbook---ink); font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; }
+.ransom_tile.is-v4 { font-weight: 900; background: var(--_scrapbook---lemon); color: var(--_scrapbook---ink); font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; }
+.lineup_intro { max-width: 36rem; margin-top: 1rem; font-family: Fraunces, Georgia, "Times New Roman", serif; font-size: 1.25rem; line-height: 1.35; color: var(--_scrapbook---ink); }
+.sticker-hover.hide-mobile-landscape.is-v1 { position: relative; width: 9rem; height: 6rem; }
+.sticker.is-smiley-lineup { left: 0; top: 0; }
+.sticker.is-star-clay-lineup { left: 3.8rem; top: 1.4rem; }
+.lineup_stages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem 1.25rem; margin: 0 0 1.75rem; padding: 0; list-style: none; }
+.lineup_stage { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.85rem 1rem; background-color: rgba(255, 253, 246, 0.82); border: 1.5px dashed rgba(34, 52, 110, 0.35); }
+.lineup_stage-icon { width: 2.4rem; height: 2.4rem; object-fit: contain; flex: none; }
+.lineup_stage-name { margin: 0 0 0.2rem; font-family: "Space Mono", ui-monospace, Menlo, monospace; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--_scrapbook---ink); }
+.lineup_stage-text { margin: 0; font-size: 0.95rem; line-height: 1.35; color: var(--_scrapbook---ink-soft); }
+.lineup_filters { display: grid; gap: 0.9rem; margin-bottom: 1.25rem; }
+.lineup_filter-group { display: flex; flex-wrap: wrap; align-items: center; gap: 0.55rem; }
+.lineup_filter-label { min-width: 4.5rem; font-weight: 700; font-size: 1.25rem; font-family: "MyUglyHandwriting", "Cabin Sketch", "Comic Sans MS", cursive; }
+.lineup_chip { display: inline-flex; align-items: center; gap: 0.45rem; min-height: 2.75rem; padding: 0.35rem 0.85rem; border: 0; font-size: var(--text-small); font-weight: 700; letter-spacing: 0.04em; color: var(--_scrapbook---ink); background: var(--_scrapbook---paper-white); box-shadow: 0 1px 0 rgba(22, 19, 15, 0.14), 0 3px 4px -1px rgba(22, 19, 15, 0.2); transform: rotate(var(--r)); cursor: pointer; transition: transform var(--dur) var(--ease-back), background-color var(--dur-fast), box-shadow var(--dur); font-family: "Space Mono", ui-monospace, Menlo, monospace; }
+.lineup_chip:hover { transform: rotate(0deg) translateY(-2px); }
+.lineup_chip.is-stage { border-radius: 999px; box-shadow: 0 0 0 3px var(--_scrapbook---paper-white), 0 2px 0 3px rgba(22, 19, 15, 0.08), 0 5px 8px rgba(22, 19, 15, 0.18); }
+.lineup_status { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: clamp(1.75rem, 3vw, 2.5rem); }
+.lineup_count { font-weight: 700; font-size: 1.2rem; font-family: "MyUglyHandwriting", "Cabin Sketch", "Comic Sans MS", cursive; }
+.lineup_days { display: flex; flex-direction: column; gap: clamp(2.75rem, 5vw, 4.25rem); min-height: 2rem; }
+.lineup_empty { padding: 2rem 0; font-weight: 700; font-size: 1.5rem; font-family: "MyUglyHandwriting", "Cabin Sketch", "Comic Sans MS", cursive; display: none; }
+.lineup_foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem 1.75rem; margin-top: clamp(2.75rem, 5vw, 3.75rem); }
+.lineup_foot-note { margin: 0; font-family: "Space Mono", ui-monospace, Menlo, monospace; font-size: 0.8rem; color: var(--_scrapbook---ink-soft); }
+@media screen and (max-width: 991px) {
+.lineup_header { grid-template-columns: 1fr; }
+.lineup_stages { grid-template-columns: 1fr; gap: 0.6rem; }
+}
+@media screen and (max-width: 767px) {
+.lineup_component { padding-left: clamp(2.4rem, 9vw, 3rem); padding-right: 1rem; }
+.lineup_filter-group { flex-wrap: nowrap; overflow-x: auto; margin-right: -1rem; padding: 0.45rem 1rem 0.7rem 0.2rem; }
+.lineup_filter-label { min-width: 0; flex: none; }
+.lineup_chip { flex: none; }
+}
+.lineup_heading { margin-top: 0.5rem; font-weight: 900; font-size: var(--text-h1); line-height: 0.84; text-transform: uppercase; color: var(--_scrapbook---ink); font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; }

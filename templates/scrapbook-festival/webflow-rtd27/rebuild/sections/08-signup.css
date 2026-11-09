@@ -1,0 +1,21 @@
+.container-medium { width: 100%; margin-left: auto; margin-right: auto; max-width: 64rem; }
+.postcard_component { position: relative; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 0; padding: clamp(1.25rem, 0.8rem + 2vw, 2.5rem); background-color: var(--_scrapbook---paper-white); background-image: var(--tex-grain), var(--tex-crumple); background-size: 160px 160px, 1440px auto; background-blend-mode: normal, multiply; box-shadow: 0 1px 1px rgba(22, 19, 15, 0.14), 0 26px 40px -24px rgba(22, 19, 15, 0.55); transform: rotate(var(--r)); }
+.postcard_message { position: relative; display: grid; align-content: start; gap: 1rem; padding-right: clamp(1rem, 3vw, 2.5rem); border-right: 2px solid rgba(22, 19, 15, 0.25); }
+.postcard_title { font-weight: 900; font-size: var(--text-h2); line-height: 0.88; text-transform: uppercase; color: var(--_scrapbook---ink-navy); font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; }
+.postcard_note { max-width: 28rem; font-style: italic; font-size: clamp(1.1rem, 1rem + 0.4vw, 1.3rem); line-height: 1.45; font-family: Fraunces, Georgia, "Times New Roman", serif; }
+.postcard_sign { font-size: 1.2rem; color: var(--ink-blue); transform: rotate(-3deg); width: fit-content; font-family: "Permanent Marker", "Marker Felt", "Comic Sans MS", cursive; }
+.postcard_address { position: relative; display: grid; align-content: end; gap: 1.1rem; min-height: 20rem; padding-left: clamp(1rem, 3vw, 2.5rem); padding-top: 7.5rem; }
+.postcard_stamp.is-logo { position: absolute; top: 0; right: 0; width: 7.25rem; height: auto; }
+.postcard_postmark { position: absolute; top: 1.2rem; right: 5.2rem; width: 7.5rem; height: 7.5rem; color: var(--_scrapbook---ink-navy); opacity: 0.75; pointer-events: none; }
+.postcard_field { display: grid; gap: 0.25rem; }
+.postcard_label { font-size: var(--text-tiny); font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; font-family: "Space Mono", ui-monospace, Menlo, monospace; }
+.postcard_input { width: 100%; min-height: 2.9rem; padding: 0.35rem 0.1rem; border: 0; border-bottom: 2px solid var(--_scrapbook---ink); border-radius: 0; background: transparent; font-size: 1.25rem; color: var(--ink-blue); outline: none; font-family: "Permanent Marker", "Marker Felt", "Comic Sans MS", cursive; }
+.postcard_input:focus { border-bottom-color: var(--_scrapbook---neon-orange); box-shadow: 0 6px 0 -3px var(--_scrapbook---acid); }
+.button.is-orange.is-v1 { justify-self: start; }
+.postcard_status { min-height: 1.5rem; font-size: var(--text-small); font-family: "Space Mono", ui-monospace, Menlo, monospace; }
+@media screen and (max-width: 767px) {
+.postcard_component { grid-template-columns: 1fr; }
+.postcard_message { padding-right: 0; border-right: 0; padding-bottom: 1.5rem; border-bottom: 2px solid rgba(22, 19, 15, 0.25); }
+.postcard_address { padding-left: 0; padding-top: 7.5rem; min-height: 0; }
+.postcard_stamp.is-logo { width: 6rem; }
+}.postcard_postmark { top: 0.4rem; right: 9rem; width: 6.5rem; height: 6.5rem; }

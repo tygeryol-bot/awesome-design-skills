@@ -1,0 +1,37 @@
+.section_zine { position: relative; isolation: isolate; }
+.padding-global.padding-section-large { padding-top: clamp(4rem, 2.5rem + 6vw, 8rem); padding-bottom: clamp(4rem, 2.5rem + 6vw, 8rem); }
+.zine_header { display: grid; gap: 0.75rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.zine_title { font-weight: 900; font-size: var(--text-h1); line-height: 0.84; text-transform: uppercase; color: var(--_scrapbook---paper-white); font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; }
+.zine_lede { max-width: 34rem; font-size: var(--text-large); color: var(--_scrapbook---paper-white); }
+.zine_component { position: relative; max-width: 74rem; margin-left: auto; margin-right: auto; }
+.zine_tabs { position: relative; z-index: 2; display: flex; gap: 0.35rem; padding: 0.6rem 1rem 0; margin-bottom: -0.1rem; overflow-x: auto; }
+.zine_tab { flex: none; position: relative; min-height: 3rem; padding: 0.75rem 1.35rem 1rem; border: 0; font-size: var(--text-small); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--_scrapbook---ink); background-color: var(--tab); background-image: var(--tex-grain); background-size: 160px 160px; border-radius: 0.6rem 0.6rem 0 0; box-shadow: inset 0 -6px 8px -6px rgba(22, 19, 15, 0.35); transform: translateY(0.45rem); cursor: pointer; transition: transform var(--dur) var(--ease-back); font-family: "Space Mono", ui-monospace, Menlo, monospace; }
+.zine_tab:hover { transform: translateY(0.15rem); }
+.zine_book { position: relative; filter: var(--drop-3); }
+.zine_spread { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 6px solid var(--tab-color, var(--_scrapbook---acid)); }
+.zine_staple { position: absolute; z-index: 2; left: 50%; width: 0.35rem; height: 2.6rem; border-radius: 2px; background: linear-gradient(90deg, #8d939b, #f2f4f6 50%, #8d939b); box-shadow: 1px 2px 2px rgba(22, 19, 15, 0.35); }
+.zine_page { background-color: var(--bg-color, var(--_scrapbook---pulp)); background-image: var(--bg-image, none); background-size: var(--bg-size, auto); background-blend-mode: var(--bg-blend, normal); position: relative; display: grid; align-content: start; gap: var(--line); min-width: 0; line-height: var(--line); }
+.zine_day { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0 1rem; }
+.zine_day-title { font-weight: 900; font-size: clamp(2rem, 1.5rem + 2vw, 3.2rem); line-height: calc(var(--line) * 2); text-transform: uppercase; font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; }
+.zine_day-note { font-size: var(--text-small); font-weight: 700; line-height: var(--line); color: var(--_scrapbook---ink-navy); font-family: "Space Mono", ui-monospace, Menlo, monospace; }
+.zine_stage { display: grid; gap: 0; }
+.zine_stage-name { display: flex; align-items: center; gap: 0.5rem; height: var(--line); }
+.zine_slots { padding: 0; list-style: none; }
+.zine_slot { display: grid; grid-template-columns: 3.6rem minmax(0, 1fr) auto; align-items: center; gap: 0.75rem; min-height: var(--line); }
+.zine_time { font-size: var(--text-small); font-weight: 700; font-family: "Space Mono", ui-monospace, Menlo, monospace; }
+.zine_act { font-weight: 700; font-size: 1.05rem; line-height: var(--line); font-family: Fraunces, Georgia, "Times New Roman", serif; }
+.zine_star { display: grid; place-items: center; width: 2.5rem; height: var(--line); padding: 0; border: 0; background: transparent; cursor: pointer; transition: transform var(--dur) var(--ease-back); }
+.zine_star:hover { transform: rotate(-14deg) scale(1.12); }
+.zine_page.surface-lined.is-right { padding-left: 3.6rem; }
+.zine_picks-empty { font-weight: 700; color: var(--_scrapbook---ink-soft); font-family: "MyUglyHandwriting", "Cabin Sketch", "Comic Sans MS", cursive; display: none; }
+.zine_toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.75rem; color: var(--_scrapbook---paper-white); }
+.switch { display: inline-flex; padding: 0; border: 0; background: transparent; color: inherit; text-decoration: none; align-items: center; gap: 0.75rem; font-size: var(--text-small); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; font-family: "Space Mono", ui-monospace, Menlo, monospace; }
+.switch_track { position: relative; width: 3.4rem; height: 1.9rem; border-radius: 999px; background: var(--_scrapbook---paper-white); box-shadow: inset 0 0 0 2px var(--_scrapbook---ink); transition: background-color var(--dur-fast); }
+.switch_thumb { position: absolute; top: 0.25rem; left: 0.25rem; width: 1.4rem; height: 1.4rem; transition: transform var(--dur) var(--ease-back); }
+.zine_picks-count { font-weight: 700; font-size: 1.2rem; font-family: "MyUglyHandwriting", "Cabin Sketch", "Comic Sans MS", cursive; }
+@media screen and (max-width: 767px) {
+.zine_spread { grid-template-columns: 1fr; }
+.zine_staple { display: none; }
+.zine_page { padding-left: 3.4rem; padding-right: 1.1rem; }
+.zine_page.surface-lined.is-right { padding-top: 0; padding-left: 3.4rem; }
+}

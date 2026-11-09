@@ -1,0 +1,39 @@
+.lineup_day { display: flex; flex-direction: column; gap: clamp(1.5rem, 3vw, 2.25rem); }
+.lineup_day-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 1.25rem; padding-bottom: 0.9rem; border-bottom: 2px dashed rgba(22, 19, 15, 0.3); }
+.lineup_day-name { margin: 0; font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; font-weight: 900; font-size: clamp(2.6rem, 1.6rem + 3.4vw, 4.4rem); line-height: 0.85; text-transform: uppercase; color: var(--_scrapbook---ink); }
+.lineup_day-line { margin: 0; font-family: "Permanent Marker", "Marker Felt", "Comic Sans MS", cursive; font-size: clamp(1.35rem, 1.1rem + 1vw, 2rem); line-height: 1.1; color: var(--_scrapbook---neon-orange); transform: rotate(-2deg); }
+.lineup_day-text { width: 100%; max-width: 36rem; margin: 0; font-size: 1.05rem; line-height: 1.45; color: var(--_scrapbook---ink-soft); }
+.lineup_grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-flow: dense; gap: clamp(1.75rem, 3vw, 2.75rem) clamp(1rem, 2vw, 1.75rem); padding: 0; list-style: none; }
+.lineup_item.is-headliner { grid-column: span 2; }
+.lineup_card { position: relative; height: 100%; filter: var(--drop-1); transform: perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translateY(var(--lift)) rotate(var(--r)); transition: transform var(--dur-slow) var(--ease-back), filter var(--dur) var(--ease-paper); }
+.lineup_card:hover { filter: var(--drop-3); }
+.tape-badge.is-corner.is-tr { top: -0.7rem; right: -1.6rem; }
+.tape-badge.is-corner.is-tr.is-acid.is-alt { clip-path: var(--tape-ends-alt); }
+.lineup_poster { background-color: var(--bg-color, var(--_scrapbook---pulp)); background-image: var(--bg-image, none); background-size: var(--bg-size, auto); background-blend-mode: var(--bg-blend, normal); position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: space-between; gap: 0.75rem; height: 100%; min-height: clamp(17rem, 14rem + 6vw, 21rem); padding: clamp(1rem, 0.8rem + 0.8vw, 1.4rem); overflow: hidden; color: var(--ink-c); clip-path: var(--tear-c); }
+.lineup_meta { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 0.35rem; font-size: var(--text-tiny); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-family: "Space Mono", ui-monospace, Menlo, monospace; }
+.lineup_art { position: absolute; z-index: 1; top: 9%; right: -5%; width: 58%; transform: rotate(var(--art-r, 10deg)); filter: drop-shadow(0 2px 2px rgba(22, 19, 15, 0.3)) drop-shadow(0 8px 8px rgba(22, 19, 15, 0.2)); transition: transform var(--dur-slow) var(--ease-back), filter var(--dur); }
+.lineup_text { position: relative; z-index: 2; display: grid; gap: 0.4rem; }
+.lineup_name { max-width: 92%; font-weight: 900; line-height: 0.88; text-transform: uppercase; font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; }
+.lineup_genre { font-size: var(--text-small); line-height: 1.3; font-family: "Space Mono", ui-monospace, Menlo, monospace; }
+.lineup_time { display: inline-block; width: fit-content; padding: 0.1rem 0.45rem; font-weight: 700; font-size: 1.15rem; color: var(--_scrapbook---ink); background: var(--_scrapbook---acid); transform: rotate(-1.5deg); font-family: "MyUglyHandwriting", "Cabin Sketch", "Comic Sans MS", cursive; }
+.lineup_save { position: absolute; z-index: 6; right: 0.6rem; bottom: 0.6rem; display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; border: 0; border-radius: 50%; background: var(--_scrapbook---paper-white); box-shadow: 0 0 0 2px var(--_scrapbook---ink), 0 4px 0 2px var(--_scrapbook---ink); cursor: pointer; transition: transform var(--dur) var(--ease-back), background-color var(--dur-fast); }
+.lineup_save:hover { transform: rotate(-12deg) scale(1.08); }
+.lineup_name.is-marker { font-style: normal; font-weight: 900; text-transform: uppercase; letter-spacing: 0; line-height: 0.9; font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; }
+.lineup_name.is-serif { font-style: normal; font-weight: 900; text-transform: uppercase; letter-spacing: 0; line-height: 0.9; font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; }
+.lineup_name.is-sketch { font-style: normal; font-weight: 900; text-transform: uppercase; letter-spacing: 0; line-height: 0.9; font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; }
+@media screen and (max-width: 991px) {
+.lineup_grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media screen and (max-width: 767px) {
+.lineup_grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.lineup_poster { min-height: 15rem; }
+}
+@media screen and (max-width: 479px) {
+.lineup_day-head { gap: 0.3rem 0.9rem; }
+.lineup_grid { gap: 1.5rem 0.85rem; }
+.lineup_item.is-headliner { grid-column: 1 / -1; }
+.lineup_poster { min-height: 13.5rem; padding: 0.85rem; }
+.lineup_meta { font-size: 0.62rem; }
+.lineup_genre { font-size: 0.75rem; }
+.lineup_save { width: 2.75rem; height: 2.75rem; right: 0.45rem; bottom: 0.45rem; }
+}

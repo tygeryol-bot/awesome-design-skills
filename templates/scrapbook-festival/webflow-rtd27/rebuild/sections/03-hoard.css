@@ -1,0 +1,45 @@
+.padding-global.padding-section-medium { padding-top: clamp(3rem, 2rem + 4vw, 5.5rem); padding-bottom: clamp(3rem, 2rem + 4vw, 5.5rem); }
+.hoard_component { position: relative; isolation: isolate; padding: clamp(2rem, 1rem + 4vw, 4.5rem) clamp(1.25rem, 0.5rem + 3.6vw, 4rem) clamp(2.5rem, 1rem + 4vw, 4.5rem); }
+.hoard_grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(0.75rem, 1.6vw, 1.5rem); row-gap: 2rem; align-items: start; }
+.hoard_headline { grid-column: 1 / span 7; grid-row: 1; font-weight: 900; font-size: var(--text-h1); line-height: 0.84; text-transform: uppercase; color: var(--_scrapbook---paper-white); text-shadow: 0.04em 0.045em 0 rgba(22, 19, 15, 0.85); font-family: "Londrina Solid", "Arial Black", Impact, sans-serif; }
+.hoard_copy { grid-column: 1 / span 6; grid-row: 2; display: grid; gap: clamp(1.5rem, 3vw, 2.25rem); }
+.paper-card { position: relative; filter: var(--drop-2); transform: translateY(var(--lift)) rotate(var(--r)); transition: transform var(--dur-slow) var(--ease-back), filter var(--dur) var(--ease-paper); }
+.paper-card:hover { filter: var(--drop-3); }
+.paper-card.hoard_definition { max-width: 30rem; }
+.tape-badge.is-corner { position: absolute; width: clamp(4.5rem, 3.5rem + 3vw, 7rem); min-height: 0; height: 1.9rem; padding: 0; }
+.tape-badge.is-corner.is-tl { top: -0.7rem; left: -1.6rem; }
+.tape-badge.is-corner.is-br { bottom: -0.7rem; right: -1.6rem; }
+.tape-badge.is-corner.is-br.is-kraft.is-alt { clip-path: var(--tape-ends-alt); }
+.paper-card_paper { background-color: var(--bg-color, var(--_scrapbook---pulp)); background-image: var(--bg-image, none); background-size: var(--bg-size, auto); background-blend-mode: var(--bg-blend, normal); position: relative; isolation: isolate; padding: clamp(1.25rem, 0.9rem + 1.6vw, 2.25rem); clip-path: var(--tear-a); }
+.paper-card_paper.is-fiber { background: var(--_scrapbook---paper-white); clip-path: var(--tear-fiber); }
+.dictionary { font-size: 1.02rem; line-height: 1.45; color: #1f1b16; font-family: Fraunces, Georgia, "Times New Roman", serif; }
+.dictionary_word { font-weight: 800; font-size: clamp(1.9rem, 1.5rem + 1.4vw, 2.6rem); line-height: 1.1; letter-spacing: -0.01em; }
+.highlight { padding: 0 0.12em; }
+.dictionary_say { font-size: var(--text-small); color: var(--_scrapbook---ink-soft); font-family: "Space Mono", ui-monospace, Menlo, monospace; }
+.dictionary_list { display: grid; gap: 0.35rem; margin-top: 0.6rem; padding-left: 1.3rem; }
+.hoard_body { max-width: 34rem; font-size: var(--text-large); line-height: 1.5; color: var(--_scrapbook---ink); }
+.hoard_facts { display: flex; flex-wrap: wrap; gap: 0.75rem 0.6rem; padding: 0; list-style: none; }
+.label-strip.is-butter { background: var(--_scrapbook---butter); }
+.hoard_collage { position: relative; grid-column: 7 / span 6; grid-row: 1 / span 2; align-self: stretch; min-height: 38rem; }
+.sticker.is-hover.is-lily-hoard { top: -4%; right: -2%; }
+.hoard_quote { position: absolute; top: 6%; left: 18%; width: min(52%, 15rem); transform: rotate(var(--r)); filter: var(--drop-2); transition: transform var(--dur-slow) var(--ease-back); }
+.hoard_quote:hover { transform: rotate(-1deg) scale(1.03); }
+.tape-badge.is-top.is-kraft.is-v2 { width: 6rem; height: 1.8rem; padding: 0; }
+.sticker.is-hover.is-eye-hoard { top: 48%; left: -2%; }
+.sticker.is-hover.is-star-painted-hoard { top: 30%; right: 4%; }
+.sticker.is-hover.is-flower-orange-hoard { bottom: 4%; right: 22%; }
+.sticker.is-hover.is-star-clay-hoard { bottom: -2%; left: 16%; }
+.sticker.is-hover.is-button-flower-hoard { bottom: 22%; right: -3%; }
+@media screen and (max-width: 991px) {
+.hoard_headline { grid-column: 1 / -1; }
+.hoard_copy { grid-column: 1 / -1; grid-row: 2; }
+.hoard_collage { grid-column: 1 / -1; grid-row: 3; min-height: 28rem; }
+}
+@media screen and (max-width: 479px) {
+.hoard_collage { min-height: 24rem; }
+}
+
+.polaroid-frame.hoard_photo { position: absolute; z-index: 5; top: 5%; left: 10%; right: auto; width: min(64%, 21rem); --r: -3deg; }
+@media (max-width: 991px) { .polaroid-frame.hoard_photo { width: min(48%, 19rem); } }
+.tape-badge.is-corner.is-tr.is-kraft.is-alt { clip-path: var(--tape-ends-alt); --r: 34deg; }
+@media (max-width: 767px) { .hoard_photo .polaroid-frame_caption { font-size: 0.85rem; } }
