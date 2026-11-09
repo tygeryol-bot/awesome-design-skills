@@ -81,7 +81,6 @@
 .ticket_barcode rect{fill:var(--ink)}
 .ticket_serial{writing-mode:vertical-rl}
 .ticket_sticker{--w:4.5rem}
-.faq_title{font-variation-settings:"SOFT" 100}
 .faq_note{--r:0deg}
 .faq_note:nth-child(3n + 1){--r:-1.6deg}
 .faq_note:nth-child(3n + 2){--r:1.2deg}
@@ -97,7 +96,6 @@
 .faq_note[open] .faq_plus{transform:rotate(135deg)}
 .faq_note .tape-badge.is-top{top:-0.9rem}
 .postcard_component{--r:-1deg}
-.postcard_title{font-variation-settings:"SOFT" 100}
 .postcard_stamp{--hole:4px; --r:4deg}
 .postcard_stamp .postage-stamp_inner{width:6.2rem; padding:0.35rem; border-width:0; background:var(--butter)}
 .postcard_stamp img{width:100%; height:auto}
@@ -159,12 +157,12 @@ transition-duration: 0.01ms !important;
 @media (max-width:767px){.lineup_filter-group::-webkit-scrollbar{display:none}}
 @media (max-width:767px){.zine_spread::after{display:none}}
 @media (max-width:767px){.footer_legal{padding-bottom:calc(5.5rem + env(safe-area-inset-bottom, 0px))}}
-.ransom_tile.is-v2{font-weight:800; background:var(--paper-white); color:var(--ink)}
+.ransom_tile.is-v2{font-weight:900; background:var(--paper-white); color:var(--ink)}
 .ransom_tile.is-v6{background:var(--paper-white); color:var(--neon-orange)}
-.ransom_tile.is-v8{font-weight:400; background:var(--butter); color:var(--ink-navy)}
+.ransom_tile.is-v8{font-weight:900; background:var(--butter); color:var(--ink-navy)}
 .note-paper_sheet.is-b{background-image:url("https://cdn.prod.website-files.com/6ae9b5983a11fb874e346b43/6ae9b7124a75c76d46326da0_rtd-paper-cream-b.webp")}
-.ransom_tile.is-v2{font-family:Fraunces, Georgia, "Times New Roman", serif}
-.ransom_tile.is-v6{font-family:"Permanent Marker", "Marker Felt", "Comic Sans MS", cursive}
+.ransom_tile.is-v2{font-family:"Londrina Solid", "Arial Black", Impact, sans-serif}
+.ransom_tile.is-v6{font-family:"Londrina Solid", "Arial Black", Impact, sans-serif}
 .ransom_tile.is-v8{font-family:"Londrina Solid", "Arial Black", Impact, sans-serif}
 .sticker.is-star-denim-b-nav { --w: 6rem; --r: 16deg; }
 .label-strip.is-v2 { --r: 1.5deg; }
@@ -318,4 +316,8 @@ a[data-fav],a[data-filter-day],a[data-filter-stage],a[data-tear],a.map_pin,a.map
 .scrapbook-hero_stamp.is-logo{transform:rotate(-6deg);filter:drop-shadow(0 2px 2px rgba(22,19,15,.28)) drop-shadow(0 16px 18px rgba(22,19,15,.3))}
 .postcard_stamp.is-logo{transform:rotate(4deg)}
 a[data-btn],a[data-build-pick],a[data-build-pick-stay]{cursor:pointer}
+/* yellow-section photo */
+.polaroid-frame.hoard_photo{--r:-3deg}
+.tape-badge.is-corner.is-tr.is-kraft.is-alt{clip-path:var(--tape-ends-alt)}
+@media (max-width:767px){.hoard_photo .polaroid-frame_caption{font-size:.85rem}}
 </style>
