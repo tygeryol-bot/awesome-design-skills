@@ -14,6 +14,7 @@ Webflow holds the real site. This folder is a backup of the code and section mar
 - Banners: continuous scroll (CSS) + Webflow scroll interaction "Marquee banners scroll"; text doubled so no gaps on wide screens.
 - FAQ: black heading, no squiggle, click-to-open answers via Webflow interactions "FAQ 1–6 toggle" (answers use class `faq_answer` + combo `is-open`).
 - Clips and postmark moved clear of text.
+- Festival map in the map section (`rtd-festival-map.webp`), tap/click opens it full size; "Tap the map" note on phones.
 - Neon green → lemon yellow `#ffd92e` (Webflow variable `acid` + `embed-3-yellow.html`).
 
 ## Embeds on the page (in order)
@@ -25,5 +26,4 @@ Webflow holds the real site. This folder is a backup of the code and section mar
 ## To check next
 - On the live link: stars save, "Only show my picks" filters, saves survive reload, day tabs, FAQ toggles, banners move.
 - Still to confirm with the client: Fri–Sun vs 2–4 Oct 2027 (Sat–Mon), placeholder prices (Slow Mornings R890, Contact Sheet R14,400), proposed set times, Computicket + Contact links.
-- Map placeholder is waiting for the real map.
 - Duplicate site "rockingthedasies27mts-f5c880" can be deleted.

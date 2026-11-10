@@ -20,3 +20,9 @@
 @media screen and (max-width: 767px) {
 .festmap_paper { aspect-ratio: 4 / 5; }
 }
+.festmap_paper { aspect-ratio: auto; padding: clamp(0.5rem, 1.2vw, 1rem); }
+.festmap_slot { display: block; height: auto; padding: 0; border: 0; text-align: left; }
+.festmap_link { display: block; }
+.festmap_img { display: block; width: 100%; height: auto; }
+.festmap_zoom { display: none; margin: 0.6rem 0 0; font-family: "Space Mono", ui-monospace, Menlo, monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--_scrapbook---ink-soft); text-align: center; }
+@media (max-width: 767px) { .festmap_paper { aspect-ratio: auto; } .festmap_zoom { display: block; } }
