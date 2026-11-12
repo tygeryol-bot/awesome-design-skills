@@ -14,7 +14,7 @@ Webflow holds the real site. This folder is a backup of the code and section mar
 - Banners: continuous scroll (CSS) + Webflow scroll interaction "Marquee banners scroll"; text doubled so no gaps on wide screens.
 - FAQ: black heading, no squiggle, click-to-open answers via Webflow interactions "FAQ 1–6 toggle" (answers use class `faq_answer` + combo `is-open`).
 - Clips and postmark moved clear of text.
-- Interactive map: the labels under the map (Stages, Camping, Entrances, Parking + transport, Toilets/water, First aid + info, Food + drink) drop pins on the map; "Accessible routes" and "Walking times" show a note (not on the map yet). Pin positions live in `embed-4-map.html` (SPOTS, % of map width/height).
+- Interactive map: the labels under the map (Stages, Camping, Entrances, Parking + transport, Toilets/water, First aid + info, Food + drink) drop pins on the map; "Accessible routes" and "Walking times" labels removed. Pin positions live in `embed-4-map.html` (SPOTS, % of map width/height).
 - Festival map in the map section (`rtd-festival-map.webp`), tap/click opens it full size; "Tap the map" note on phones.
 - Neon green → lemon yellow `#ffd92e` (Webflow variable `acid` + `embed-3-yellow.html`).
 
