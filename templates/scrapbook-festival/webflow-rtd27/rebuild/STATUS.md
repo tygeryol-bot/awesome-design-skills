@@ -14,14 +14,16 @@ Webflow holds the real site. This folder is a backup of the code and section mar
 - Banners: continuous scroll (CSS) + Webflow scroll interaction "Marquee banners scroll"; text doubled so no gaps on wide screens.
 - FAQ: black heading, no squiggle, click-to-open answers via Webflow interactions "FAQ 1–6 toggle" (answers use class `faq_answer` + combo `is-open`).
 - Clips and postmark moved clear of text.
+- Interactive map: the labels under the map (Stages, Camping, Entrances, Parking + transport, Toilets/water, First aid + info, Food + drink) drop pins on the map; "Accessible routes" and "Walking times" show a note (not on the map yet). Pin positions live in `embed-4-map.html` (SPOTS, % of map width/height).
 - Festival map in the map section (`rtd-festival-map.webp`), tap/click opens it full size; "Tap the map" note on phones.
 - Neon green → lemon yellow `#ffd92e` (Webflow variable `acid` + `embed-3-yellow.html`).
 
 ## Embeds on the page (in order)
 1. `embed-1-base.html` – fonts, tokens, base styles
 2. `embed-2-components.html` – component states, keyframes, stamp, photo
-3. `embed-3-yellow.html` – yellow overrides
-4. `embed-script.html` – stars/picks, schedule tabs, filters, builder, mobile CTA (runs only on the published site, not in Designer/Preview)
+3. `embed-3-yellow.html` – yellow overrides, plain blue ticket, banner reduced-motion
+4. `embed-4-map.html` – interactive map pins (style + script)
+5. `embed-script.html` – stars/picks, schedule tabs, filters, builder, mobile CTA (runs only on the published site, not in Designer/Preview)
 
 ## Gotcha
 Webflow's publish step compresses `rgba(...)0 1px` into an invalid colour like `#ffffff1a0`, which drops the whole background. Always put a space after `)` in gradient colour stops (fixed on marquee_tape, ticket_band, tape-badge).

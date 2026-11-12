@@ -1,0 +1,53 @@
+<style>/* interactive festival map */
+.festmap_slot{position:relative}
+.festmap_pins{position:absolute;inset:0;pointer-events:none;z-index:2}
+.festmap_pin{position:absolute;width:0;height:0;opacity:0;transform:scale(.4);transition:opacity .25s ease,transform .35s cubic-bezier(.34,1.56,.64,1)}
+.festmap_pin.is-on{opacity:1;transform:scale(1)}
+.festmap_pin-dot{position:absolute;left:-.55rem;top:-.55rem;width:1.1rem;height:1.1rem;border-radius:50%;background:var(--neon-orange,#ff6a1f);border:3px solid #fffdf6;box-shadow:0 2px 6px rgba(22,19,15,.45)}
+.festmap_pin-dot::after{content:"";position:absolute;inset:-.55rem;border-radius:50%;border:3px solid var(--neon-orange,#ff6a1f);animation:festmap-ping 1.6s ease-out infinite}
+.festmap_pin-label{position:absolute;left:.8rem;top:-.8rem;white-space:nowrap;padding:.2rem .45rem;background:#16130f;color:#fffdf6;font-family:"Space Mono",ui-monospace,Menlo,monospace;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 2px 4px rgba(22,19,15,.35);transform:rotate(-2deg)}
+.festmap_pin.is-left .festmap_pin-label{left:auto;right:.8rem;transform:rotate(2deg)}
+@keyframes festmap-ping{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.7);opacity:0}}
+.festmap_slot.is-filtering .festmap_img{filter:saturate(.55) brightness(1.04);transition:filter .3s}
+.festmap_legend-item{cursor:pointer;user-select:none;transition:transform .2s,background-color .2s,box-shadow .2s}
+.festmap_legend-item:hover{transform:rotate(0) translateY(-2px)}
+.festmap_legend-item[aria-pressed="true"]{background-color:var(--acid,#ffd92e);box-shadow:0 0 0 2px #16130f;transform:rotate(0) translateY(-2px)}
+.festmap_legend-item:focus-visible{outline:3px solid #16130f;outline-offset:3px}
+.festmap_note{margin:.9rem auto 0;text-align:center;font-family:"Space Mono",ui-monospace,Menlo,monospace;font-size:.8rem;letter-spacing:.04em;color:#5b5546;min-height:1.2em}
+.festmap_note a{color:inherit;text-decoration:underline}
+@media (max-width:767px){.festmap_pin-dot{left:-.4rem;top:-.4rem;width:.8rem;height:.8rem;border-width:2px}.festmap_pin-label{display:none}}
+@media (prefers-reduced-motion: reduce){.festmap_pin-dot::after{animation:none;opacity:0}}
+</style>
+<script>
+(function(){
+  var SPOTS=[{"c":"stages","l":"Main Stage","x":49.0,"y":35.63},{"c":"stages","l":"Stage 2","x":37.25,"y":45.73},{"c":"stages","l":"Stage 3","x":62.75,"y":45.73},{"c":"camping","l":"Wildflower Camping","x":28.5,"y":27.4},{"c":"camping","l":"Daisyland Glamping","x":41.9,"y":22.38},{"c":"camping","l":"General Camping","x":20.35,"y":41.62},{"c":"camping","l":"Slow Mornings","x":77.4,"y":35.03},{"c":"camping","l":"Your Own Patch","x":77.9,"y":49.85},{"c":"camping","l":"Pre-pitched Village","x":74.1,"y":67.44},{"c":"entrances","l":"Main Gate","x":46.35,"y":67.44},{"c":"entrances","l":"Priority Gate","x":54.75,"y":67.29},{"c":"parking","l":"Parking","x":23.85,"y":73.43},{"c":"parking","l":"Parking + shuttle drop-off","x":46.85,"y":77.77},{"c":"parking","l":"To Darling","x":13.1,"y":87.87},{"c":"parking","l":"To Cape Town","x":75.0,"y":90.04},{"c":"toilets","l":"Toilets","x":35.6,"y":16.17},{"c":"toilets","l":"Toilets","x":83.0,"y":44.09},{"c":"toilets","l":"Water point","x":31.5,"y":31.74},{"c":"toilets","l":"Water point","x":63.9,"y":56.21},{"c":"firstaid","l":"First aid","x":12.3,"y":56.21},{"c":"firstaid","l":"Info / lost property","x":37.6,"y":58.91},{"c":"food","l":"Food stalls","x":49.0,"y":46.48},{"c":"food","l":"Food + bar","x":58.0,"y":44.39},{"c":"food","l":"Memory ATM","x":49.4,"y":55.84}];
+  var CATS=[["stages","stage"],["camping","camp"],["entrances","entrance"],["parking","parking"],["toilets","toilet"],["firstaid","first aid"],["food","food"],["accessible","accessible"],["walking","walking"]];
+  var NOTES={accessible:'Accessible routes aren\u2019t marked on this map yet. See <a href="#plan">Plan your trip</a> for accessibility info.',walking:'Walking times aren\u2019t marked on this map yet.'};
+  function init(){
+    var slot=document.querySelector('.festmap_slot'), legend=document.querySelector('.festmap_legend');
+    if(!slot||!legend||slot.querySelector('.festmap_pins'))return;
+    var layer=document.createElement('div'); layer.className='festmap_pins'; layer.setAttribute('aria-hidden','true');
+    SPOTS.forEach(function(s){var p=document.createElement('span'); p.className='festmap_pin'+(s.x>72?' is-left':''); p.dataset.cat=s.c; p.style.left=s.x+'%'; p.style.top=s.y+'%';
+      p.innerHTML='<span class="festmap_pin-dot"></span><span class="festmap_pin-label"></span>'; p.lastChild.textContent=s.l; layer.appendChild(p);});
+    slot.appendChild(layer);
+    var note=document.createElement('p'); note.className='festmap_note'; note.setAttribute('aria-live','polite'); legend.parentNode.insertBefore(note,legend.nextSibling);
+    var items=[].slice.call(legend.querySelectorAll('.festmap_legend-item')), active=null;
+    items.forEach(function(li){var t=li.textContent.toLowerCase(), cat=null;
+      CATS.forEach(function(c){if(!cat&&t.indexOf(c[1])>-1)cat=c[0];}); if(!cat)return;
+      li.dataset.cat=cat; li.setAttribute('role','button'); li.tabIndex=0; li.setAttribute('aria-pressed','false');
+      function go(){ show(active===cat?null:cat); }
+      li.addEventListener('click',go); li.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});});
+    function show(cat){ active=cat; var n=0;
+      items.forEach(function(li){li.setAttribute('aria-pressed',String(li.dataset.cat===cat&&!!cat));});
+      [].forEach.call(layer.children,function(p){var on=!!cat&&p.dataset.cat===cat; p.classList.toggle('is-on',on); if(on)n++;});
+      slot.classList.toggle('is-filtering',n>0);
+      if(!cat){note.textContent='';return;}
+      var label=(items.filter(function(li){return li.dataset.cat===cat;})[0]||{}).textContent||'';
+      if(NOTES[cat]){note.innerHTML=NOTES[cat];return;}
+      note.textContent='Showing '+n+' '+(n===1?'spot':'spots')+' for '+label.trim().toLowerCase()+'. Tap again to clear.';
+      var r=slot.getBoundingClientRect(); if(r.top<0||r.bottom>window.innerHeight){slot.scrollIntoView({behavior:'smooth',block:'center'});}
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
