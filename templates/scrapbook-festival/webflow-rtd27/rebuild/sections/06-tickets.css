@@ -58,3 +58,11 @@
 .ticket_price { flex-wrap: wrap; row-gap: 0.5rem; column-gap: 0.3rem; }
 .ticket_amount { white-space: nowrap; line-height: 0.9; }
 .ticket_per { flex: 0 0 100%; line-height: 1.3; }
+.surface-blue{--bg-color:var(--denim-pale);--bg-image:var(--tex-grain),var(--tex-crumple);--bg-size:160px 160px,1440px auto;--bg-blend:normal,multiply}
+body .ticket_card.is-golden{--r:0deg}
+.ticket_grid.is-two{align-items:stretch}
+.ticket_card{display:flex;flex-direction:column}
+.ticket_card.is-featured{margin-top:0}
+.ticket_ticket{display:flex;flex-direction:column;flex:1 1 auto}
+.ticket_body{display:flex;flex-direction:column;flex:1 1 auto}
+.ticket_cta{margin-top:auto}

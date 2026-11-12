@@ -10,7 +10,7 @@ Webflow holds the real site. This folder is a backup of the code and section mar
 - Hero: night stage photo in the polaroid ("main stage, after dark"), "click the poster" hint removed, bigger date, wristband ticket stacked and left-aligned.
 - Yellow section: "everything is hard" note replaced by taped daytime stage polaroid.
 - All headings Londrina Solid; line-up title is a plain heading.
-- Tickets: price on one line, "per person" underneath.
+- Tickets: price on one line, "per person" underneath; Golden Hour on plain crumpled blue paper; both cards straight, equal height, buttons and stubs level.
 - Banners: continuous scroll (CSS) + Webflow scroll interaction "Marquee banners scroll"; text doubled so no gaps on wide screens.
 - FAQ: black heading, no squiggle, click-to-open answers via Webflow interactions "FAQ 1–6 toggle" (answers use class `faq_answer` + combo `is-open`).
 - Clips and postmark moved clear of text.
