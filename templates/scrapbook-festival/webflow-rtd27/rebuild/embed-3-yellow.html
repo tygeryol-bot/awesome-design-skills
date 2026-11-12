@@ -7,4 +7,6 @@
 /* tickets: plain crumpled blue paper, both cards straight */
 .surface-blue{--bg-color:var(--denim-pale);--bg-image:var(--tex-grain), var(--tex-crumple);--bg-size:160px 160px, 1440px auto;--bg-blend:normal, multiply}
 .ticket_card.is-golden{--r:0deg}
+/* banners keep scrolling (slower) even with Reduce Motion on */
+@media (prefers-reduced-motion: reduce){.marquee_track{animation-name:marquee !important;animation-duration:60s !important;animation-timing-function:linear !important;animation-iteration-count:infinite !important}.marquee_tape.is-orange .marquee_track{animation-direction:reverse !important;animation-duration:70s !important}}
 </style>
